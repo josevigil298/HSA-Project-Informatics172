@@ -1,0 +1,17 @@
+
+body{
+    padding-top: 180px;
+}
+
+.navbar{
+    background-color: #1E3A8A;
+}
+
+.navbar-brand{
+    font-weight: 600;
+}
+
+.second-section{
+    background-color: #1E3A8A;
+    color: white
+}
