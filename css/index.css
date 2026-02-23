@@ -11,7 +11,53 @@ body{
     font-weight: 600;
 }
 
+#navButton{
+    background-color: #2563eb;
+}
+
+#heroButton{
+    background-color: #2563eb;
+    border-style: solid;
+}
+
+
 .second-section{
     background-color: #1E3A8A;
-    color: white
+    color: white;
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+}
+
+.percentage{
+    font-weight: bold;
+}
+
+
+.responsive-img-1{
+    max-width: 75%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.responsive-img-2{
+    max-width: 35%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.responsive-img-3{
+    max-width: 75%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+.Section-Text{
+    font-size: large;
 }
