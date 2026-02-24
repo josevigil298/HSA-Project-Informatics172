@@ -1,0 +1,97 @@
+body{
+    padding-top: 180px;
+}
+
+.navbar{
+    background-color: #1E3A8A;
+}
+
+.navbar-brand{
+    font-weight: 600;
+}
+
+.module-container {
+    max-width: 900px;
+}
+
+.video-placeholder {
+    height: 250px;
+    background-color: #e9ecef;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+
+.step-progress {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Draw main background line */
+.step-progress::before {
+    content: "";
+    position: absolute;
+    top: 20px; /* Half of circle height (40px / 2) */
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #dee2e6;
+    z-index: 0;
+}
+
+.step {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    background-color: white;
+    border: 3px solid #dee2e6;
+}
+
+/* Completed */
+.step.completed .circle {
+    border-color: #198754;
+    background-color: #198754;
+    color: white;
+}
+
+/* Active */
+.step.active .circle {
+    border-color: #1E3A8A;
+    background-color: #1E3A8A;
+    color: white;
+}
+
+.btn-success {
+    background-color: #1E3A8A; /* New background color */
+    border-color: #1E3A8A;     /* Match border */
+    color: white;              /* Text color */
+}
+
+.btn-success:hover {
+    background-color: #2563eb; /* Darker shade on hover */
+    border-color: #2563eb;
+}
+
+
+.btn-outline-primary.active {
+    background-color: #0d6efd; /* Bootstrap primary blue */
+    color: white;
+}
