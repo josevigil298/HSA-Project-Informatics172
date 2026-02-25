@@ -1,0 +1,54 @@
+body{
+    padding-top: 180px;
+}
+
+.navbar{
+    background-color: #1E3A8A;
+}
+
+.navbar-brand{
+    font-weight: 600;
+    padding-left: 60px;
+}
+
+
+/* Reset */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 150px;
+}
+
+/* Top Card */
+.top-card {
+    width: 100%;
+}
+
+/* Bottom Cards */
+.bottom-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+.bottom-cards .card {
+    flex: 1; /* Equal width */
+    min-width: 150px; /* Prevent too small on mobile */
+    height: 800px;
+}

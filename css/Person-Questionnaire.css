@@ -1,0 +1,47 @@
+body{
+    padding-top: 180px;
+}
+
+.navbar{
+    background-color: #1E3A8A;
+}
+
+.navbar-brand{
+    font-weight: 600;
+}
+
+#navButton{
+    background-color: #2563eb;
+}
+.option-card {
+    cursor: pointer;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+.option-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Hide description by default */
+.option-description {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.25s ease;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Show on hover */
+.option-card:hover .option-description {
+    opacity: 1;
+    max-height: 200px;
+}
+
+.option-card.selected {
+    border: 2px solid #2563eb;
+    background-color: #e0ecff;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}

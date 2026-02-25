@@ -95,3 +95,36 @@ body{
     background-color: #0d6efd; /* Bootstrap primary blue */
     color: white;
 }
+
+
+/* Full screen center wrapper */
+.completion-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Card styling */
+.completion-card {
+    background-color: #ffffff;
+    padding: 60px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Circle check icon */
+.completion-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #198754;
+    color: white;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
