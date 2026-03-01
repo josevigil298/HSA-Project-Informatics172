@@ -28,7 +28,7 @@ continueBtn.addEventListener('click', () => {
     if (!selectedValue) return;
 
     if (selectedValue === "HDHP") {
-        window.location.href = "../pages/Personal-Questionnaire-Q3.html";
+        window.location.href = "Personal-Questionnaire-Q3.html";
     } 
     else if (selectedValue === "other") {
         window.location.href = "../pages/Dashboard.html";

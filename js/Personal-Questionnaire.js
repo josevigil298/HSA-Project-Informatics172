@@ -28,9 +28,9 @@ continueBtn.addEventListener('click', () => {
     if (!selectedValue) return;
 
     if (selectedValue === "own") {
-        window.location.href = "../pages/Personal-Questionnaire-Q2.html";
+        window.location.href = "Personal-Questionnaire-Q2.html";
     } 
     else if (selectedValue === "none") {
-        window.location.href = "../pages/Dashboard.html";
+        window.location.href = "/pages/Dashboard.html";
     }
 });
