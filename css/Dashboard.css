@@ -1,5 +1,6 @@
-body{
-    padding-top: 180px;
+body {
+    margin: 0;
+    padding-top: 50px;
 }
 
 .navbar{
@@ -11,44 +12,234 @@ body{
     padding-left: 60px;
 }
 
-
-/* Reset */
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Layout container */
+.dashboard {
+    display: grid;
+    grid-template-columns: 320px 1fr;
 }
 
-/* Container */
-.container {
+/* Sidebar */
+.sidebar {
+    background: white;
+    border-right: 1px solid #e5e7eb;
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
-/* Cards */
-.card {
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    height: 150px;
+/* Sidebar Header */
+.sidebar-header {
+    padding: 24px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Top Card */
-.top-card {
-    width: 100%;
+.sidebar-header h4 {
+    margin: 0;
 }
 
-/* Bottom Cards */
-.bottom-cards {
+#progressCount {
+    background: #eef2ff;
+    color: #3730a3;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Scrollable checklist */
+.sidebar-body {
+    padding: 24px;
+    overflow-y: auto;
+}
+
+/* Phases */
+.phase {
+    margin-bottom: 24px;
+}
+
+.phase h6 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Checklist items */
+.phase label {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.phase input {
+    margin-right: 8px;
+    accent-color: #4f46e5;
+}
+
+/* Main content */
+.main-content {
+    padding: 40px;
+    background: #f8fafc;
+    overflow-y: auto;
+}
+
+.placeholder {
+    background: white;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+/* Responsive (stack on small screens) */
+@media (max-width: 900px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+    }
+}
+
+
+/* Horizontal Step Container */
+.step-container {
+    display: flex;
+    height: 450px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* All panels */
+.step-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    color: white;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Active large panel */
+.step-panel.active {
+    flex: 2.5;
+    background: #c7d3cf;
+    color: #2b2b2b;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Other panels */
+.step-2 {
+    background: #7d96b5;
+}
+
+.step-3 {
+    background: #5f7ea8;
+}
+
+.step-4 {
+    background: #2f5b99;
+}
+
+/* Icons */
+.step-icon {
+    font-size: 36px;
+    background: white;
+    color: black;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Step Label Bottom */
+.step-label {
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+/* Active panel content */
+.step-content h2 {
+    max-width: 500px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Optional hover expansion effect */
+.step-panel:not(.active):hover {
+    flex: 1.5;
+    cursor: pointer;
+}
+
+
+
+/* Resource Hub */
+.resource-hub {
+    margin-bottom: 30px;
+}
+
+.resource-hub h3 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Horizontal scroll container */
+.resource-container {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* Wrap on smaller screens */
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
 }
 
-.bottom-cards .card {
-    flex: 1; /* Equal width */
-    min-width: 150px; /* Prevent too small on mobile */
-    height: 800px;
+/* Hide scrollbar in Webkit browsers */
+.resource-container::-webkit-scrollbar {
+    display: none;
 }
+
+/* Individual cards */
+.resource-card {
+    flex: 0 0 250px; /* fixed width cards */
+    background: #f8f9fa;
+    color: #2b2b2b;
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.resource-card h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.resource-card p {
+    font-size: 14px;
+    color: #555;
+}
+

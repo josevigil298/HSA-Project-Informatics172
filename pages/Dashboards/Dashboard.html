@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/Dashboard.css" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+<body>
+    <nav class = "navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class = "container-fluid">
+            <a class="navbar-brand fw-bold" href="../../index.html">HSANext</a>
+        </div>
+    </nav>
+
+    <div class="dashboard">
+
+        <!-- LEFT SIDEBAR CHECKLIST -->
+        <aside class="sidebar">
+    
+            <div class="sidebar-header">
+                <h4>Your Pathway</h4>
+                <span id="progressCount">0 / 10</span>
+            </div>
+    
+            <div class="sidebar-body">
+    
+                <div class="phase">
+                    <h6>Phase 1</h6>
+                    <label><input type="checkbox"> 50% financial support</label>
+                    <label><input type="checkbox"> Independent Tax Year</label>
+                    <label><input type="checkbox"> Not claimed on 1040</label>
+                </div>
+    
+                <div class="phase">
+                    <h6>Phase 2</h6>
+                    <label><input type="checkbox"> Verify plan type</label>
+                    <label><input type="checkbox"> Leave PPO/HMO if needed</label>
+                    <label><input type="checkbox"> HDHP + tax independent</label>
+                    <label><input type="checkbox"> Employer plan = HDHP</label>
+                </div>
+    
+                <div class="phase">
+                    <h6>Phase 3</h6>
+                    <label><input type="checkbox"> Save $1750 buffer</label>
+                    <label><input type="checkbox"> Understand deductible</label>
+                    <label><input type="checkbox"> Keep medical records</label>
+                </div>
+    
+            </div>
+    
+        </aside>
+    
+        <!-- MAIN CONTENT AREA -->
+        <main class="main-content">
+            <!-- Resource Hub -->
+            <section class="resource-hub">
+                <h3>HSA Resource Hub</h3>
+                <div class="resource-container">
+                    <a href="#" target="_blank" class="resource-card">
+                        <div class="card-icon">📄</div>
+                        <h5>Place Holder</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                    </a>
+
+                    <a href="#" target="_blank" class="resource-card">
+                        <div class="card-icon">📄</div>
+                        <h5>Place Holder</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                    </a>
+
+                    <a href="#" target="_blank" class="resource-card">
+                        <div class="card-icon">📄</div>
+                        <h5>Place Holder</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                    </a>
+
+                    <a href="#" target="_blank" class="resource-card">
+                        <div class="card-icon">📄</div>
+                        <h5>Place Holder</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                    </a>
+
+                    <a href="#" target="_blank" class="resource-card">
+                        <div class="card-icon">📄</div>
+                        <h5>Place Holder</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                    </a>
+                </div>
+            </section>
+
+            <h3>HSA Eligibility Rules</h2>
+            <p>You are eligible to contribute to an HSA only if certain conditions are met, including the following:</p>
+
+            <div class="step-container">
+
+                <div class="step-panel active">
+                    <div class="step-icon">📋</div>
+                    <div class="step-content">
+                        <h2>Your current health insurance coverage is classified as a high-deductible health plan (HDHP).</h2>
+                    </div>
+                </div>
+            
+                <div class="step-panel step-2">
+                    <div class="step-icon">🩺</div>
+                    <span class="step-label">Step 2</span>
+                </div>
+            
+                <div class="step-panel step-3">
+                    <div class="step-icon">💰</div>
+                    <span class="step-label">Step 3</span>
+                </div>
+            
+                <div class="step-panel step-4">
+                    <div class="step-icon">🧳</div>
+                    <span class="step-label">Step 4</span>
+                </div>
+            
+            </div>
+
+            <!-- FAQ Section -->
+            <section class="faq-section mt-5">
+                <h3>Frequently Asked Questions</h3>
+                <div class="accordion" id="faqAccordion">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeading1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                                Placeholder Question 1
+                            </button>
+                        </h2>
+                        <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                Placeholder Question 2
+                            </button>
+                        </h2>
+                        <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                Placeholder Question 3
+                            </button>
+                        </h2>
+                        <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqHeading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                Placeholder Question 4
+                            </button>
+                        </h2>
+                        <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    
+    </div>
+
+    <script src="../../js/EligibilityRules.js"></script>
+    <script src="../../js/Dashboard-Checklist.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
