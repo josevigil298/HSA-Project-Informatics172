@@ -22,15 +22,15 @@ optionCards.forEach(card => {
     });
 });
 
-// // Continue button navigation
-// continueBtn.addEventListener('click', () => {
+// Continue button navigation
+continueBtn.addEventListener('click', () => {
 
-//     if (!selectedValue) return;
+    if (!selectedValue) return;
 
-//     if (selectedValue === "Independently") {
-//         window.location.href = "#";
-//     } 
-//     else if (selectedValue === "Dependently") {
-//         window.location.href = "#";
-//     }
-// });
+    if (selectedValue === "Independently") {
+        window.location.href = "../Result-Question/HSA-Resources.html";
+    } 
+    else if (selectedValue === "Dependently") {
+        window.location.href = "../Result-Question/Next-Step.html";
+    }
+});

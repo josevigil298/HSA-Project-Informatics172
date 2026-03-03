@@ -1,0 +1,63 @@
+body{
+    padding-top: 180px;
+}
+
+.navbar{
+    background-color: #1E3A8A;
+}
+
+.navbar-brand{
+    font-weight: 600;
+}
+
+/* Container Width */
+.branch-container {
+    max-width: 900px;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #1E3A8A;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+/* Main Card */
+.content-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Qualifications List */
+.qualifications li {
+    margin-bottom: 10px;
+}
+
+/* Provider Cards */
+.provider-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #e9ecef;
+    transition: all 0.2s ease;
+}
+
+.provider-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Requirements Section */
+.requirements {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+}

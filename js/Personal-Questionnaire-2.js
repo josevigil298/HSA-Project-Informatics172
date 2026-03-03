@@ -31,6 +31,6 @@ continueBtn.addEventListener('click', () => {
         window.location.href = "Personal-Questionnaire-Q3.html";
     } 
     else if (selectedValue === "other") {
-        window.location.href = "../pages/Dashboard.html";
+        window.location.href = "/pages/Dashboard.html";
     }
 });
