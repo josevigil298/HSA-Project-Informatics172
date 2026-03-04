@@ -1,10 +1,11 @@
-/* ===== BODY & NAVBAR ===== */
+/* ===== BODY ===== */
 body {
-    padding-top: 50px; /* space for fixed navbar */
+    padding-top: 70px;
     font-family: sans-serif;
     background-color: #F7F4EE;
 }
 
+/* ===== NAVBAR ===== */
 .navbar {
     background-color: #2F3E4F;
 }
@@ -13,164 +14,250 @@ body {
     font-weight: 600;
 }
 
-/* ===== MODULE CONTAINER & VIDEO PLACEHOLDER ===== */
+/* ===== MODULE CONTAINER ===== */
 .module-container {
     max-width: 900px;
-    margin: 0 auto;
 }
 
-.video-placeholder {
-    height: 250px;
-    background-color: #e9ecef;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-}
-
-/* ===== STEP PROGRESS BAR ===== */
+/* ===== STEP PROGRESS ===== */
 .step-progress {
     display: flex;
     align-items: center;
-    position: relative;
-    margin: 2rem 0;
 }
 
-/* Step circles */
 .step {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    z-index: 1;
 }
 
 .circle {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: white;
-    border: 3px solid #dee2e6; /* default gray */
+    border: 3px solid #e6ddcc;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 600;
+    font-size: 13px;
 }
 
-/* Completed step circle */
-.step.completed .circle {
-    border-color: #C8A96E;
-    background-color: #C8A96E;
-    color: white;
-}
-
-/* Active step circle */
 .step.active .circle {
     border-color: #C8A96E;
     background-color: #C8A96E;
-    color: white;
 }
 
-/* Lines between steps */
 .line {
     flex: 1;
-    height: 4px;
-    background-color: #dee2e6; /* default gray */
-    margin: 0 5px;
-    align-self: center;
-    z-index: 0;
+    height: 3px;
+    background-color: #e6ddcc;
+    margin: 0 10px;
 }
 
-/* Completed or active lines */
 .line.completed {
     background-color: #C8A96E;
 }
 
-/* ===== BUTTONS ===== */
-.btn-success {
-    background-color: #1E3A8A;
-    border-color: #1E3A8A;
+/* ===== BACK BUTTON ===== */
+.btn-back {
+    background-color: #5F7A55;
+    color: white;
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-weight: 600;
+}
+
+.btn-back:hover {
+    background-color: #4f6847;
     color: white;
 }
 
-.btn-success:hover {
-    background-color: #2563eb;
-    border-color: #2563eb;
+/* ===== MODULE CARD ===== */
+.custom-module-card {
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.btn-outline-primary.active {
-    background-color: #0d6efd;
+.module-header {
+    background-color: #3F5E44;
+    padding: 16px 20px;
     color: white;
 }
 
-/* ===== COMPLETION CARD ===== */
-.completion-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.module-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.module-subtitle {
+    color: #C8A96E;
+    font-style: italic;
+}
+
+.module-content {
     padding: 20px;
 }
 
-.completion-card {
-    background-color: #ffffff;
-    padding: 60px 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    max-width: 500px;
-    width: 100%;
+.learning-label {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #6b6b6b;
+    margin-bottom: 8px;
 }
 
-.completion-icon {
-    width: 90px;
-    height: 90px;
-    margin: 0 auto 20px auto;
-    border-radius: 50%;
-    background-color: #C8A96E;
-    color: white;
-    font-size: 2.5rem;
+/* ===== VIDEO SECTION ===== */
+.video-frame {
+    height: 230px;
+    background-color: #2F3E4F;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* ===== CUSTOM CARDS ===== */
-.custom-card {
+/* play triangle */
+.play-icon {
+    width: 0;
+    height: 0;
+    border-left: 18px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+/* ===== NEXT BUTTON ===== */
+.btn-next {
+    background-color: #5F7A55;
+    color: white;
+    border-radius: 999px;
+    padding: 8px 22px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+}
+
+.btn-next:hover {
+    background-color: #4f6847;
+    color: white;
+}
+
+/* ===================================================== */
+/* ===== COMPREHENSION CHECK STYLES (RESTORED) ===== */
+/* ===================================================== */
+
+.comprehension-card {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+/* Green header bar */
+.comprehension-header {
+    background-color: #3F5E44;
+    color: white;
+    padding: 14px 18px;
+    font-weight: 700;
+}
+
+/* Question label (small gold-ish) */
+.question-label {
+    font-size: 0.75rem;
+    color: #C8A96E;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+/* Question text */
+.question-text {
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+/* Answer options */
+.option {
+    text-align: left;
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+
+/* Selected option state (your JS should toggle .active) */
+.option.active {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+    color: #111827;
+}
+
+/* Check answer button */
+.btn-check-answer {
     background-color: #3F5E44;
     color: white;
     border: none;
-    border-radius: 10px;
-    padding: 2.5rem 1.5rem;
-    text-align: left;
-    height: 100%;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-weight: 600;
 }
 
-/* Headings & paragraphs spacing */
-.custom-card h4,
-.custom-card h5 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+.btn-check-answer:hover {
+    background-color: #2e4735;
+    color: white;
 }
 
-.custom-card p {
-    margin-bottom: 1rem;
+/* Feedback text area */
+.feedback {
+    min-height: 24px; /* prevents layout jump */
 }
 
-/* Divider */
-.divider {
-    height: 3px;
-    width: 50px;
-    background-color: #D4A857;
-    margin: 0.75rem 0 1rem 0; /* left-aligned */
-    border-radius: 5px;
+
+/* ===== COMPLETION LAYOUT FIX ===== */
+.completion-wrapper {
+    /* gives the wrapper real vertical space to work with */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
 }
 
-/* Light variant for cards */
-.light-card {
+/* ===== TALLER COMPLETION CARD ===== */
+.completion-card {
     background-color: #ffffff;
-    color: #3F5E44;
+    padding: 40px 60px;   /* slightly more side padding */
+    border-radius: 8px;
+
+    max-width: 520px;     /* ← makes the card wider */
+    width: 100%;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+}
+/* green check circle */
+.completion-icon {
+    width: 86px;
+    height: 86px;
+    margin: 0 auto 18px auto;
+    border-radius: 50%;
+    background-color: #5F7A55;
+    color: white;
+    font-size: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* ===== SPACING & LAYOUT ===== */
-.row.g-5 {
-    gap: 2rem; /* spacing between columns */
+/* green pill continue button */
+.completion-card .btn-primary {
+    background-color: #5F7A55 !important;
+    border-color: #5F7A55 !important;
+    border-radius: 999px;
+    padding: 8px 22px;
+    font-weight: 600;
+}
+
+.completion-card .btn-primary:hover {
+    background-color: #4f6847 !important;
+    border-color: #4f6847 !important;
 }

@@ -1,72 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Open an HSA - HSANext</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HSA Pathway - Providers</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../css/Final_Steps.css" rel="stylesheet">
+  <!-- Bootstrap (optional, you can remove if you don't want it) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../css/Final_Steps.css" />
 </head>
 <body>
 
-<nav class = "navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class = "container">
-        <a class="navbar-brand fw-bold" href="../../index.html">HSANext</a>
+  <!-- Top Nav -->
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">HSA<span class="brand-accent">Next</span></div>
     </div>
-</nav>
+  </nav>
 
-<div class="container branch-container">
+  <main class="page">
+    <div class="page-inner">
 
-    <a href="javascript:history.back()" class="back-btn">← Back</a>
+      <!-- Back -->
+      <a class="pill-btn pill-btn--green back-btn" href="javascript:history.back()">← Back</a>
 
-    <div class="content-card text-center">
-
-        <h3 class="mb-4">You're all ready to open an HSA!</h3>
-
-        <h5 class="mb-4 text-muted">Popular HSA Providers</h5>
-
-        <div class="row g-4">
-
-            <div class="col-md-4">
-                <div class="provider-card">
-                    <h5>Fidelity</h5>
-                    <p>No account fees</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm">Visit</a>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="provider-card">
-                    <h5>HealthEquity</h5>
-                    <p>Employer integrated</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm">Visit</a>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="provider-card">
-                    <h5>Lively</h5>
-                    <p>Simple & low-cost</p>
-                    <a href="#" class="btn btn-outline-primary btn-sm">Visit</a>
-                </div>
-            </div>
-
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-kicker">
+          <span class="kicker-line"></span>
+          <span class="kicker-text">YOUR PATHWAY</span>
+          <span class="kicker-line"></span>
         </div>
 
-        <div class="requirements mt-5 text-start">
-            <h6>What you'll need to open an account:</h6>
-            <ul>
-                <li>Social Security Number</li>
-                <li>Government-issued ID</li>
-                <li>Bank account for funding</li>
-                <li>HDHP insurance details</li>
-            </ul>
+        <h1 class="hero-title">You’re all ready to open an <em>HSA</em>!</h1>
+        <p class="hero-subtitle">
+          Choose a provider below and get started. All three are trusted, HSA-eligible options —
+          pick one that best fits your situation!
+        </p>
+      </section>
+
+      <!-- Providers -->
+      <section class="section">
+        <div class="section-header">
+          <span class="section-label">POPULAR HSA PROVIDERS</span>
+          <span class="section-rule"></span>
         </div>
 
-    </div>
+        <div class="providers">
+          <!-- Card 1 -->
+          <article class="provider-card">
+            <div class="provider-card-inner">
+              <h3 class="provider-name">HealthEquity</h3>
+              <div class="provider-underline"></div>
 
-</div>
+              <ul class="provider-list">
+                <li>Seamlessly integrates with most employers</li>
+                <li>Easy payroll contribution setup</li>
+                <li>Robust member support</li>
+              </ul>
+
+              <a class="pill-btn pill-btn--outline" href="#" aria-label="Visit HealthEquity">
+                Visit HealthEquity <span class="arrow">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="provider-card provider-card--featured">
+
+            <div class="provider-card-inner">
+              <h3 class="provider-name">Fidelity</h3>
+              <div class="provider-underline provider-underline--light"></div>
+
+              <ul class="provider-list provider-list--light">
+                <li>Zero account maintenance fees</li>
+                <li>Broad investment options</li>
+                <li>Great for self-directed investors</li>
+              </ul>
+
+              <a class="pill-btn pill-btn--light" href="#" aria-label="Visit Fidelity">
+                Visit Fidelity <span class="arrow">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="provider-card">
+            <div class="provider-card-inner">
+              <h3 class="provider-name">Lively</h3>
+              <div class="provider-underline"></div>
+
+              <ul class="provider-list">
+                <li>Clean, beginner-friendly interface</li>
+                <li>Free for individuals</li>
+                <li>FDIC-insured cash amount</li>
+              </ul>
+
+              <a class="pill-btn pill-btn--outline" href="#" aria-label="Visit Lively">
+                Visit Lively <span class="arrow">→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- What you'll need -->
+      <section class="section">
+        <div class="section-header">
+          <span class="section-label">WHAT YOU’LL NEED</span>
+          <span class="section-rule"></span>
+        </div>
+
+        <div class="need-card">
+          <div class="need-header">
+            <h2 class="need-title">What you’ll need to <em>open an account</em></h2>
+            <div class="need-underline"></div>
+          </div>
+
+          <div class="need-grid">
+            <div class="need-item">
+              <label class="check">
+                <input type="checkbox" checked>
+                <span class="box"></span>
+              </label>
+              <div class="need-text">
+                <div class="need-kicker">ITEM 1</div>
+                <div class="need-main">Social Security Number</div>
+                <div class="need-sub">Required for identity verification</div>
+              </div>
+            </div>
+
+            <div class="need-item">
+              <label class="check">
+                <input type="checkbox" checked>
+                <span class="box"></span>
+              </label>
+              <div class="need-text">
+                <div class="need-kicker">ITEM 2</div>
+                <div class="need-main">Government-Issued ID</div>
+                <div class="need-sub">Driver’s license or passport</div>
+              </div>
+            </div>
+
+            <div class="need-item">
+              <label class="check">
+                <input type="checkbox">
+                <span class="box"></span>
+              </label>
+              <div class="need-text">
+                <div class="need-kicker">ITEM 3</div>
+                <div class="need-main">Bank Account for Funding</div>
+                <div class="need-sub">Routing & account number</div>
+              </div>
+            </div>
+
+            <div class="need-item">
+              <label class="check">
+                <input type="checkbox">
+                <span class="box"></span>
+              </label>
+              <div class="need-text">
+                <div class="need-kicker">ITEM 4</div>
+                <div class="need-main">HDHP Insurance Details</div>
+                <div class="need-sub">Plan name & deductible amount</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Button -->
+      <div class="footer-cta">
+        <a class="pill-btn pill-btn--green" href="../../index.html">Return to Homepage</a>
+      </div>
+
+    </div>
+  </main>
 
 </body>
 </html>

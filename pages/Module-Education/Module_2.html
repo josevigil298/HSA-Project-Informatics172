@@ -1,69 +1,101 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name = "author" content = "Jose Vigil">
-        <meta name = "description" content = "Educational Module 1">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href = "../../css/Modules.css" rel = "stylesheet">
-        <title>Educational Module 2 - HSANext</title>
-    </head>
-    <body>
-        <nav class = "navbar navbar-expand-lg navbar-dark fixed-top">
-            <div class = "container">
-                <a class="navbar-brand fw-bold" href="../../index.html">HSANext</a>
-            </div>
-        </nav>
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="Jose Vigil">
+<meta name="description" content="Educational Module 1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <div class="container module-container">
-            <div class="step-progress mb-5">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../css/Modules.css" rel="stylesheet">
 
-                <div class="step completed">
-                    <div class="circle">1</div>
-                </div>
-            
-                <div class="step active">
-                    <div class="circle">2</div>
-                </div>
-            
-                <div class="step">
-                    <div class="circle">3</div>
-                </div>
-            
-                
-            
-            </div>
+<title>Educational Module 1 - HSANext</title>
+</head>
 
-            <!-- Title Section -->
+<body>
 
-            <div class="d-flex align-items-center mb-4">
-                <a href="javascript:history.back()" class="me-3 fs-4 text-decoration-none">←</a>
-                <h3 class="fw-semibold mb-0">Educational Module 2: Lorem ipsum dolor sit amet consectetur adipiscing elit quisque.</h3>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html">HSANext</a>
+        </div>
+    </nav>
+
+    <div class="container module-container">
+
+    <!-- Back + Step Progress -->
+    <div class="d-flex align-items-center mb-5">
+
+        <a href="javascript:history.back()" class="btn btn-back me-4">
+            ← Back
+        </a>
+
+        <div class="step-progress flex-grow-1">
+
+            <div class="step active">
+                <div class="circle">1</div>
             </div>
 
-            <div class="card shadow-sm mb-4 p-4">
-                <ul>
-                    <li>Lorem ipsum dolor sit amet consectetur.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur.</li>
-                </ul>
+            <div class="line completed"></div>
+
+            <div class="step active">
+                <div class="circle">2</div>
             </div>
 
-            <div class="card shadow-sm p-4 text-center mb-4">
-                <div class="video-placeholder">
-                    ▶ Video Placeholder
-                </div>
-            </div>
-            
-            <div class="d-flex justify-content-end gap-3 mb-3">
-                <a href="../Module-Questions/Module_2_Question_1.html" class="btn btn-outline-secondary">Skip</a>
-                <a href = "../Module-Questions/Module_2_Question_1.html" class="btn btn-success">Next</a>
+            <div class="line completed"></div>
+
+            <div class="step">
+                <div class="circle">3</div>
             </div>
 
         </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+    </div>
+
+    <!-- Module Card -->
+    <div class="card shadow-sm mb-4 custom-module-card">
+
+        <div class="module-header">
+            <h3 class="module-title">
+                Educational Module 2:
+                <span class="module-subtitle">HDHPs, Eligibility, & Plan Types</span>
+            </h3>
+        </div>
+
+        <div class="module-content">
+
+            <p class="learning-label">LEARNING OBJECTIVES</p>
+
+            <ul>
+                <li>Understand what makes a health plan HSA-eligible</li>
+                <li>Explain how a High Deductible Health Plan (HDHP) works</li>
+                <li>Compare HDHPs with other common plan types (PPOs, HMOs) and understand their ineligibility</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Video Card -->
+    <div class="card shadow-sm p-4 text-center mb-4">
+
+        <div class="video-frame">
+            <div class="play-icon"></div>
+        </div>
+
+    </div>
+
+    <!-- Next Button -->
+    <div class="d-flex justify-content-end gap-3 mb-3">
+        <a href="../Module-Questions/Module_2_Question_1.html" class="btn btn-next">
+            Next
+        </a>
+    </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>

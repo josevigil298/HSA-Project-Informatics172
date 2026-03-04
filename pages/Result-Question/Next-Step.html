@@ -1,42 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Next Step - HSANext</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Action Plan</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../css/Final_Steps.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/Next-Step.css" />
 </head>
 <body>
 
-<nav class = "navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class = "container">
-        <a class="navbar-brand fw-bold" href="../../index.html">HSANext</a>
+  <!-- Top Nav -->
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <a href = "../../index.html"><div class="brand">HSA<span class="brand-accent">Next</span></div></a>
     </div>
-</nav>
+  </nav>
 
-<div class="container branch-container">
+  <main class="page">
+    <div class="page-inner">
 
-    <a href="javascript:history.back()" class="back-btn">← Back</a>
+      <!-- Back -->
+      <a class="pill-btn pill-btn--green back-btn" href="javascript:history.back()">← Back</a>
 
-    <div class="content-card">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-kicker">
+          <span class="kicker-line"></span>
+          <span class="kicker-text">YOUR PATHWAY</span>
+          <span class="kicker-line"></span>
+        </div>
 
-        <h3 class="mb-3">
-            Next Step: Filing taxes independently
-        </h3>
+        <h1 class="hero-title">
+          You’re <em class="gold">almost there</em>,<br>
+          one step to unlock your HSA!
+        </h1>
 
-        <h5 class="text-muted mb-4">Qualifications:</h5>
+        <p class="hero-subtitle">
+          You have your own HDHP plan, which is great. The only thing standing between you and your HSA
+          is your tax filing status. Once you file independently, you’ll be fully eligible to contribute.
+        </p>
+      </section>
 
-        <ul class="qualifications">
-            <li>Must not be claimed as a dependent</li>
-            <li>Must have qualifying high-deductible health plan</li>
-            <li>No disqualifying coverage</li>
-        </ul>
+      <!-- Action Plan -->
+      <section class="section">
+        <div class="section-header">
+          <span class="section-label">YOUR ACTION PLAN</span>
+          <span class="section-rule"></span>
+        </div>
+
+        <div class="plan">
+
+          <!-- Completed item -->
+          <article class="plan-card plan-card--done">
+            <div class="plan-left">
+              <div class="plan-icon plan-icon--check">✓</div>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Confirm you have your own HDHP Coverage</h3>
+              <p class="plan-desc">
+                Your health insurance plan is classified as a High-Deductible Health Plan and you are the
+                primary policyholder — not covered under a parent’s plan
+              </p>
+            </div>
+          </article>
+
+          <!-- Completed item -->
+          <article class="plan-card plan-card--done">
+            <div class="plan-left">
+              <div class="plan-icon plan-icon--check">✓</div>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Verify you pay more than 50% of your own living expenses</h3>
+              <p class="plan-desc">
+                Rent, food, transportation, and insurance all count. If you cover the majority of your own
+                costs, you likely qualify to file independently
+              </p>
+            </div>
+          </article>
+
+          <!-- Step 3 -->
+          <article class="plan-card plan-card--todo">
+            <div class="plan-left">
+              <div class="plan-icon plan-icon--num">3</div>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Identify your first Independent Tax Year</h3>
+              <p class="plan-desc">
+                This is the first year in which neither you nor your guardian claims dependent status for you.
+                Once you’ve filed independently for that year, your HSA eligibility begins — you can open and
+                contribute to your account immediately.
+              </p>
+              <a class="plan-link" href="#">Tax Year Calculator →</a>
+            </div>
+          </article>
+
+          <!-- Step 4 -->
+          <article class="plan-card plan-card--todo">
+            <div class="plan-left">
+              <div class="plan-icon plan-icon--num">4</div>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">File your taxes independently</h3>
+              <p class="plan-desc">
+                You can file for free through IRS Free File if your income is under $79,000.
+                Once your independent return is submitted, you’re officially HSA-eligible for that tax year.
+              </p>
+              <a class="plan-link" href="#">IRS Free File →</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Footer Button -->
+      <div class="footer-cta">
+        <a class="pill-btn pill-btn--green" href="../../index.html">Return to Homepage</a>
+      </div>
 
     </div>
-
-</div>
+  </main>
 
 </body>
 </html>

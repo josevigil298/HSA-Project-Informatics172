@@ -1,189 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../css/Dashboard.css" rel="stylesheet">
-    <title>Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HSANext - Dashboard</title>
+  <link rel="stylesheet" href="../../css/Dashboard.css" />
 </head>
 <body>
-    <nav class = "navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class = "container-fluid">
-            <a class="navbar-brand fw-bold" href="../../index.html">HSANext</a>
-        </div>
-    </nav>
 
-    <div class="dashboard">
-
-        <!-- LEFT SIDEBAR CHECKLIST -->
-        <aside class="sidebar">
-    
-            <div class="sidebar-header">
-                <h4>Your Pathway</h4>
-                <span id="progressCount">0 / 10</span>
-            </div>
-    
-            <div class="sidebar-body">
-    
-                <div class="phase">
-                    <h6>Phase 1</h6>
-                    <label><input type="checkbox"> 50% financial support</label>
-                    <label><input type="checkbox"> Independent Tax Year</label>
-                    <label><input type="checkbox"> Not claimed on 1040</label>
-                </div>
-    
-                <div class="phase">
-                    <h6>Phase 2</h6>
-                    <label><input type="checkbox"> Verify plan type</label>
-                    <label><input type="checkbox"> Leave PPO/HMO if needed</label>
-                    <label><input type="checkbox"> HDHP + tax independent</label>
-                    <label><input type="checkbox"> Employer plan = HDHP</label>
-                </div>
-    
-                <div class="phase">
-                    <h6>Phase 3</h6>
-                    <label><input type="checkbox"> Save $1750 buffer</label>
-                    <label><input type="checkbox"> Understand deductible</label>
-                    <label><input type="checkbox"> Keep medical records</label>
-                </div>
-    
-            </div>
-    
-        </aside>
-    
-        <!-- MAIN CONTENT AREA -->
-        <main class="main-content">
-            <!-- Resource Hub -->
-            <section class="resource-hub">
-                <h3>HSA Resource Hub</h3>
-                <div class="resource-container">
-                    <a href="#" target="_blank" class="resource-card">
-                        <div class="card-icon">📄</div>
-                        <h5>Place Holder</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                    </a>
-
-                    <a href="#" target="_blank" class="resource-card">
-                        <div class="card-icon">📄</div>
-                        <h5>Place Holder</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                    </a>
-
-                    <a href="#" target="_blank" class="resource-card">
-                        <div class="card-icon">📄</div>
-                        <h5>Place Holder</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                    </a>
-
-                    <a href="#" target="_blank" class="resource-card">
-                        <div class="card-icon">📄</div>
-                        <h5>Place Holder</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                    </a>
-
-                    <a href="#" target="_blank" class="resource-card">
-                        <div class="card-icon">📄</div>
-                        <h5>Place Holder</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                    </a>
-                </div>
-            </section>
-
-            <h3>HSA Eligibility Rules</h2>
-            <p>You are eligible to contribute to an HSA only if certain conditions are met, including the following:</p>
-
-            <div class="step-container">
-
-                <div class="step-panel active">
-                    <div class="step-icon">📋</div>
-                    <div class="step-content">
-                        <h2>Your current health insurance coverage is classified as a high-deductible health plan (HDHP).</h2>
-                    </div>
-                </div>
-            
-                <div class="step-panel step-2">
-                    <div class="step-icon">🩺</div>
-                    <span class="step-label">Step 2</span>
-                </div>
-            
-                <div class="step-panel step-3">
-                    <div class="step-icon">💰</div>
-                    <span class="step-label">Step 3</span>
-                </div>
-            
-                <div class="step-panel step-4">
-                    <div class="step-icon">🧳</div>
-                    <span class="step-label">Step 4</span>
-                </div>
-            
-            </div>
-
-            <!-- FAQ Section -->
-            <section class="faq-section mt-5">
-                <h3>Frequently Asked Questions</h3>
-                <div class="accordion" id="faqAccordion">
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faqHeading1">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-                                Placeholder Question 1
-                            </button>
-                        </h2>
-                        <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faqHeading2">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                                Placeholder Question 2
-                            </button>
-                        </h2>
-                        <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faqHeading3">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-                                Placeholder Question 3
-                            </button>
-                        </h2>
-                        <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faqHeading4">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-                                Placeholder Question 4
-                            </button>
-                        </h2>
-                        <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-        </main>
-    
+  <!-- Top Nav -->
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">HSA<span class="brand-accent">Next</span></div>
     </div>
+  </nav>
 
-    <script src="../../js/EligibilityRules.js"></script>
-    <script src="../../js/Dashboard-Checklist.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <div class="layout">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-head">
+        <h2>Your Pathway</h2>
+      </div>
+
+      <div class="sidebar-body">
+
+        <section class="phase-block">
+          <h3 class="phase-title">PHASE 1: TAX INDEPENDENCE TEST</h3>
+
+          <div class="timeline">
+            <div class="dot"></div>
+            <div class="item">
+              Will you provide more than 50% of your own financial support (rent, food, insurance, etc.)?
+              Identify your “Independent Tax Year”
+            </div>
+
+            <div class="dot"></div>
+            <div class="item">
+              Ensure your guardian does not claim you a dependent on their 1040 tax form
+            </div>
+          </div>
+        </section>
+
+        <section class="phase-block">
+          <h3 class="phase-title">PHASE 2: INSURANCE COMPATIBILITY</h3>
+
+          <div class="timeline">
+            <div class="dot"></div>
+            <div class="item">
+              Verify Plan Type: Is your current plan type a PPO, HMO, or HDHP?
+              <span class="info">ⓘ</span>
+            </div>
+
+            <div class="dot"></div>
+            <div class="item">
+              If you leave your current plan because you obtain health insurance through your employer,
+              select an HDHP or HSA eligible plan
+            </div>
+          </div>
+        </section>
+
+        <section class="phase-block">
+          <h3 class="phase-title">PHASE 3: THE PREP WORK</h3>
+
+          <div class="timeline">
+            <div class="dot"></div>
+            <div class="item">
+              Deductible Buffer: Open a High-Yield Savings Account and save at least $1750
+              <span class="info">ⓘ</span>
+            </div>
+
+            <div class="dot"></div>
+            <div class="item">
+              Keep a medical paper trail to track healthcare spending/needs
+            </div>
+          </div>
+        </section>
+
+        <section class="testimonial">
+          <h3 class="testimonial-title">TESTIMONIAL</h3>
+          <div class="avatar"></div>
+          <div class="person">Eduardo Ruiz</div>
+          <div class="role">Recent Post-Graduate Student,<br/>Marketer</div>
+
+          <p class="quote">
+            “I graduated in June with absolutely no idea what to do about health insurance...
+            HSANext walked me through everything in a way that actually made sense.”
+          </p>
+        </section>
+
+      </div>
+    </aside>
+
+    <!-- RIGHT MAIN -->
+    <main class="main">
+      <div class="main-inner">
+
+        <div class="top-actions">
+          <a class="pill-btn" href="javascript:history.back()">← Back</a>
+
+          <div class="title-wrap">
+            <h1 class="page-title">
+              Your <span class="highlight">Personalized</span> Dashboard
+            </h1>
+            <p class="page-subtitle">
+              Some kind of description explaining what this personalized dashboard is
+            </p>
+          </div>
+        </div>
+
+        <!-- Resource Hub -->
+        <section class="section">
+          <h2 class="section-title">Resource Hub</h2>
+
+          <div class="resource-grid">
+            <div class="video-card">
+              <div class="video-thumb"><span class="play">▶</span></div>
+              <div class="video-caption">title of video</div>
+            </div>
+
+            <div class="video-card">
+              <div class="video-thumb"><span class="play">▶</span></div>
+              <div class="video-caption">
+                title of video
+                <div class="dots">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="video-card">
+              <div class="video-thumb"><span class="play">▶</span></div>
+              <div class="video-caption">title of video</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- HSA Eligibility Rules (click to expand) -->
+        <section class="section">
+          <h2 class="section-title">HSA Eligibility Rules</h2>
+          <p class="section-subtext">
+            You are eligible to contribute to an HSA only if certain conditions are met, including the following:
+          </p>
+
+          <div class="rule-controls">
+            <button class="nav-btn" id="prevRule" type="button" aria-label="Previous">←</button>
+            <button class="nav-btn" id="nextRule" type="button" aria-label="Next">→</button>
+          </div>
+
+          <div class="rules" id="rules">
+            <!-- Step 1 -->
+            <button class="rule-panel is-active" type="button" data-step="1">
+              <div class="rule-icon">📋</div>
+              <div class="rule-body">
+                <div class="rule-text">
+                  Your current health insurance coverage is classified as a high-deductible health plan (HDHP).
+                </div>
+              </div>
+              <div class="rule-footer">
+                <span class="rule-label">Step 1</span>
+              </div>
+            </button>
+
+            <!-- Step 2 -->
+            <button class="rule-panel" type="button" data-step="2">
+              <div class="rule-icon">🩺</div>
+              <div class="rule-body">
+                <div class="rule-text">
+                  You must not have other non-HDHP coverage (like a PPO/HMO) that disqualifies you from HSA eligibility.
+                </div>
+              </div>
+              <div class="rule-footer">
+                <span class="rule-label">Step 2</span>
+              </div>
+            </button>
+
+            <!-- Step 3 -->
+            <button class="rule-panel" type="button" data-step="3">
+              <div class="rule-icon">💰</div>
+              <div class="rule-body">
+                <div class="rule-text">
+                  You generally can’t be enrolled in Medicare and contribute to an HSA at the same time.
+                </div>
+              </div>
+              <div class="rule-footer">
+                <span class="rule-label">Step 3</span>
+              </div>
+            </button>
+
+            <!-- Step 4 -->
+            <button class="rule-panel" type="button" data-step="4">
+              <div class="rule-icon">🧳</div>
+              <div class="rule-body">
+                <div class="rule-text">
+                  You can’t be claimed as a dependent on someone else’s tax return (with limited exceptions).
+                </div>
+              </div>
+              <div class="rule-footer">
+                <span class="rule-label">Step 4</span>
+              </div>
+            </button>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section">
+          <h2 class="section-title">FAQ</h2>
+
+          <div class="faq">
+            <button class="faq-row" type="button" aria-expanded="false">
+              <span>Question</span><span class="chev">⌄</span>
+            </button>
+            <div class="faq-panel">
+              Answer content goes here.
+            </div>
+
+            <button class="faq-row" type="button" aria-expanded="false">
+              <span>Question</span><span class="chev">⌄</span>
+            </button>
+            <div class="faq-panel">
+              Answer content goes here.
+            </div>
+
+            <button class="faq-row" type="button" aria-expanded="false">
+              <span>Question</span><span class="chev">⌄</span>
+            </button>
+            <div class="faq-panel">
+              Answer content goes here.
+            </div>
+
+            <button class="faq-row" type="button" aria-expanded="false">
+              <span>Question</span><span class="chev">⌄</span>
+            </button>
+            <div class="faq-panel">
+              Answer content goes here.
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script src="../../js/Dashboard.js"></script>
 </body>
 </html>

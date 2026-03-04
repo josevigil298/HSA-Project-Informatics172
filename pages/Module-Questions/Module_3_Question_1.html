@@ -18,51 +18,134 @@
         </nav>
 
         <div class="container module-container">
-            <div class="step-progress mb-5">
+            <div class="d-flex align-items-center mb-5">
 
-                <div class="step completed">
-                    <div class="circle">1</div>
-                </div>
+                <!-- Back Button -->
+                <a href="javascript:history.back()" class="btn btn-back me-4">
+                    ← Back
+                </a>
             
-                <div class="step completed">
-                    <div class="circle">2</div>
+                <!-- Step Progress -->
+                <div class="step-progress flex-grow-1">
+                    <div class="step active">
+                        <div class="circle">1</div>
+                    </div>
+                    
+                    <div class="line completed"></div>
+                    
+                    <div class="step active">
+                        <div class="circle">2</div>
+                    </div>
+                    
+                    <div class="line completed"></div>
+                    
+                    <div class="step active">
+                        <div class="circle">3</div>
+                    </div>
                 </div>
-            
-                <div class="step active">
-                    <div class="circle">3</div>
-                </div>
-            
-                
             
             </div>
-
             <!-- Title Section -->
 
-            <div class="d-flex align-items-center mb-4">
-                <a href="javascript:history.back()" class="me-3 fs-4 text-decoration-none">←</a>
-                <h3 class="fw-semibold mb-0">Educational Module 3: Comprehension Check</h3>
+            <div class="card comprehension-card shadow-sm mb-5">
+
+                <!-- Green Header -->
+                <div class="comprehension-header">
+                    Comprehension Check:
+                </div>
+            
+                <div class="p-4">
+            
+                    <!-- QUESTION 1 -->
+                    <div class="question-block mb-5">
+                        <p class="question-label">QUESTION 1</p>
+                        <p class="question-text">
+                            Alex is a recent graduate and just started a job at a tech startup. The company offers a High Deductible Health Plan (HDHP) and sets up an HSA for all employees through a specific bank.
+                            Alex notices a small deduction from each paycheck going into this account. Which enrollment scenario does this represent?
+                        </p>
+            
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-primary option" data-correct="false">ACA Marketplace purchase + open your own HSA</button>
+                            <button class="btn btn-outline-primary option" data-correct="false">Employer-sponsored HDHP + separate HSA provider</button>
+                            <button class="btn btn-outline-primary option" data-correct="true">Employer-sponsored HDHP + employer’s HSA provider</button>
+                            <button class="btn btn-outline-primary option" data-correct="false">Private insurance purchase + open your own HSA</button>
+                        </div>
+            
+                        <div class="feedback mt-3 fw-bold"></div>
+            
+                        <div class="text-end mt-3">
+                            <button class="btn btn-check-answer">Check Answer</button>
+                        </div>
+                    </div>
+            
+                    <!-- QUESTION 2 -->
+                    <div class="question-block mb-5">
+                        <p class="question-label">QUESTION 2</p>
+                        <p class="question-text">
+                            Danielle is a 23-year-old freelance social media manager. Since Jordan is self-employed, they visit HealthCare.gov to find a 'Bronze' plan labeled as 'HSA-eligible.'
+                            What is the next step Jordan must take to actually start saving money in an HSA?
+                        </p>
+            
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-primary option" data-correct="false">
+                                Wait for the government to automatically open an HSA account for them
+                            </button>
+                            <button class="btn btn-outline-primary option" data-correct="true">
+                                Open a separate HSA at a bank or brokerage of their choice 
+                            </button>
+                            <button class="btn btn-outline-primary option" data-correct="false">
+                                Request an HSA from the private insurance carrier directly
+                            </button>
+                            <button class="btn btn-outline-primary option" data-correct="false">
+                                Nothing; the insurance plan itself acts as the saving account
+                            </button>
+                        </div>
+            
+                        <div class="feedback mt-3 fw-bold"></div>
+            
+                        <div class="text-end mt-3">
+                            <button class="btn btn-check-answer">Check Answer</button>
+                        </div>
+                    </div>
+
+                    <!-- QUESTION 3 -->
+
+                    <div class="question-block mb-5">
+                        <p class="question-label">QUESTION 3</p>
+                        <p class="question-text">
+                            Taylor's employer offers a qualifying HDHP insurance plan but does not partner with any specific bank for health savings. 
+                            Taylor wants to contribute to an HSA. How will Taylor put money into the account?
+                        </p>
+            
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-primary option" data-correct="false">
+                                The money will automatically be deducted from Taylor’s paycheck.
+                            </button>
+                            <button class="btn btn-outline-primary option" data-correct="false">
+                                The insurance company will deposit a portion of the premium into the HSA 
+                            </button>
+                            <button class="btn btn-outline-primary option" data-correct="false">
+                                Taylor cannot have an HSA if the employer doesn’t provide a specific bank.
+                            </button>
+                            <button class="btn btn-outline-primary option" data-correct="true">
+                                Taylor must open an account with a separate provider and add money manually
+                            </button>
+                        </div>
+            
+                        <div class="feedback mt-3 fw-bold"></div>
+            
+                        <div class="text-end mt-3">
+                            <button class="btn btn-check-answer">Check Answer</button>
+                        </div>
+                    </div>
+            
+                </div>
             </div>
 
-            <div class="question-section mt-4">
-                <h5 class="mb-3">2. Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus?</h5>
-            
-                <!-- Options as buttons -->
-                <div class="d-grid gap-2 mb-3">
-                    <button class="btn btn-outline-primary" data-correct="false">A) Lorem ipsum dolor.</button>
-                    <button class="btn btn-outline-primary" data-correct="false">B) Lorem ipsum dolor.</button>
-                    <button class="btn btn-outline-primary" data-correct="false">C) Lorem ipsum dolor.</button>
-                    <button class="btn btn-outline-primary" data-correct="true">D) Lorem ipsum dolor.</button>
-                </div>
-            
-                <!-- Feedback -->
-                <div id="feedback" class="mb-3 fw-bold"></div>
-            
-                <!-- Action buttons -->
-                <div class="d-flex justify-content-end">
-                    <button id="checkBtn" class="btn btn-success me-2">Check Answer</button>
-                    <a href = "../Module-Completion.html" id="nextBtn" class="btn btn-primary me-2" style="display:none;">Next</a>
-                    <a href = "../Module-Completion.html" id="skipBtn" class="btn btn-warning" style="display:none;">Skip</a>
-                </div>
+            <div class="text-end mb-5">
+                <a href="../Module-Completion.html" class="btn btn-next">
+                    Next →
+                </a>
             </div>
 
         </div>
