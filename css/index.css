@@ -1,63 +1,105 @@
-
-body{
-    padding-top: 180px;
+body {
+    padding-top: 50px;
 }
 
-.navbar{
-    background-color: #1E3A8A;
+/* NAVBAR */
+.navbar {
+    background-color: #2F3E4F;
 }
 
-.navbar-brand{
-    font-weight: 600;
+.nav-hidden {
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-#navButton{
-    background-color: #2563eb;
+.nav-visible {
+    opacity: 1;
 }
 
-#heroButton{
-    background-color: #2563eb;
-    border-style: solid;
+/* HERO */
+.hero-section {
+    background: linear-gradient(rgba(47,62,79,0.9), rgba(47,62,79,0.9));
+    background-size: cover;
+    background-position: center;
+    min-height: 55vh;
+    padding: 4rem 0;
 }
 
+.button-start{
+    background-color: #6B8F61;
+    border: #6B8F61;
+    border-radius: 100px;
+}
 
-.second-section{
-    background-color: #1E3A8A;
+/* GREEN INTRO SECTION */
+.intro-section {
+    background-color: #3F5E44;
     color: white;
-    min-height: 30vh;
+}
+
+/* SECTION LABEL */
+.section-label {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #6c757d;
+}
+
+/* HIGHLIGHT COLOR */
+.highlight-text {
+    color: #D4A857;
+}
+
+/* WHY SECTION */
+.why-section {
+    background-color: #f3f1ed;
+}
+
+/* CARDS */
+.custom-card {
+    background-color: #3F5E44;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 2.5rem 1.5rem;
+    text-align: left;
+}
+
+.divider {
+    height: 3px;
+    width: 50px;
+    background-color: #D4A857;
+    margin: 0.75rem 0 1rem 0;
+    border-radius: 5px;
+}
+
+.light-card {
+    background-color: #c8d3c0;
+    color: black;
+}
+
+.dark-card{
+    background-color: #2F3E4F;
+    color: white;
+}
+
+/* JOURNEY SECTION */
+.journey-section {
+    background-color: #f3f1ed;
+}
+
+/* Placeholder screenshot box */
+.placeholder-box {
+    background-color: #d9d9d9;
+    height: 200px;
     display: flex;
     align-items: center;
-}
-
-.percentage{
+    justify-content: center;
+    border-radius: 8px;
     font-weight: bold;
+    color: #555;
 }
 
-
-.responsive-img-1{
-    max-width: 75%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-
-.responsive-img-2{
-    max-width: 35%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.responsive-img-3{
-    max-width: 75%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-
-
-.Section-Text{
-    font-size: large;
+/* FOOTER */
+.footer {
+    background-color: #2F3E4F;
 }

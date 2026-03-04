@@ -1,17 +1,22 @@
-body{
-    padding-top: 180px;
+/* ===== BODY & NAVBAR ===== */
+body {
+    padding-top: 50px; /* space for fixed navbar */
+    font-family: sans-serif;
+    background-color: #F7F4EE;
 }
 
-.navbar{
-    background-color: #1E3A8A;
+.navbar {
+    background-color: #2F3E4F;
 }
 
-.navbar-brand{
+.navbar-brand {
     font-weight: 600;
 }
 
+/* ===== MODULE CONTAINER & VIDEO PLACEHOLDER ===== */
 .module-container {
     max-width: 900px;
+    margin: 0 auto;
 }
 
 .video-placeholder {
@@ -24,80 +29,81 @@ body{
     font-size: 24px;
 }
 
-
+/* ===== STEP PROGRESS BAR ===== */
 .step-progress {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     position: relative;
+    margin: 2rem 0;
 }
 
-/* Draw main background line */
-.step-progress::before {
-    content: "";
-    position: absolute;
-    top: 20px; /* Half of circle height (40px / 2) */
-    left: 0;
-    right: 0;
-    height: 4px;
-    background-color: #dee2e6;
-    z-index: 0;
-}
-
+/* Step circles */
 .step {
-    position: relative;
-    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1;
+    z-index: 1;
 }
 
 .circle {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #dee2e6;
+    background-color: white;
+    border: 3px solid #dee2e6; /* default gray */
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    background-color: white;
-    border: 3px solid #dee2e6;
 }
 
-/* Completed */
+/* Completed step circle */
 .step.completed .circle {
-    border-color: #198754;
-    background-color: #198754;
+    border-color: #C8A96E;
+    background-color: #C8A96E;
     color: white;
 }
 
-/* Active */
+/* Active step circle */
 .step.active .circle {
-    border-color: #1E3A8A;
-    background-color: #1E3A8A;
+    border-color: #C8A96E;
+    background-color: #C8A96E;
     color: white;
 }
 
+/* Lines between steps */
+.line {
+    flex: 1;
+    height: 4px;
+    background-color: #dee2e6; /* default gray */
+    margin: 0 5px;
+    align-self: center;
+    z-index: 0;
+}
+
+/* Completed or active lines */
+.line.completed {
+    background-color: #C8A96E;
+}
+
+/* ===== BUTTONS ===== */
 .btn-success {
-    background-color: #1E3A8A; /* New background color */
-    border-color: #1E3A8A;     /* Match border */
-    color: white;              /* Text color */
+    background-color: #1E3A8A;
+    border-color: #1E3A8A;
+    color: white;
 }
 
 .btn-success:hover {
-    background-color: #2563eb; /* Darker shade on hover */
+    background-color: #2563eb;
     border-color: #2563eb;
 }
 
-
 .btn-outline-primary.active {
-    background-color: #0d6efd; /* Bootstrap primary blue */
+    background-color: #0d6efd;
     color: white;
 }
 
-
-/* Full screen center wrapper */
+/* ===== COMPLETION CARD ===== */
 .completion-wrapper {
     display: flex;
     align-items: center;
@@ -105,7 +111,6 @@ body{
     padding: 20px;
 }
 
-/* Card styling */
 .completion-card {
     background-color: #ffffff;
     padding: 60px 40px;
@@ -115,16 +120,57 @@ body{
     width: 100%;
 }
 
-/* Circle check icon */
 .completion-icon {
     width: 90px;
     height: 90px;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     border-radius: 50%;
-    background-color: #198754;
+    background-color: #C8A96E;
     color: white;
     font-size: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* ===== CUSTOM CARDS ===== */
+.custom-card {
+    background-color: #3F5E44;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 2.5rem 1.5rem;
+    text-align: left;
+    height: 100%;
+}
+
+/* Headings & paragraphs spacing */
+.custom-card h4,
+.custom-card h5 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.custom-card p {
+    margin-bottom: 1rem;
+}
+
+/* Divider */
+.divider {
+    height: 3px;
+    width: 50px;
+    background-color: #D4A857;
+    margin: 0.75rem 0 1rem 0; /* left-aligned */
+    border-radius: 5px;
+}
+
+/* Light variant for cards */
+.light-card {
+    background-color: #ffffff;
+    color: #3F5E44;
+}
+
+/* ===== SPACING & LAYOUT ===== */
+.row.g-5 {
+    gap: 2rem; /* spacing between columns */
 }

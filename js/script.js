@@ -1,12 +1,9 @@
-const heroButton = document.getElementById("heroButton");
-const navButton = document.getElementById("navButton");
+document.addEventListener("scroll", function () {
+    const navButton = document.getElementById("navButton");
 
-window.addEventListener("scroll", function () {
-    const buttonPosition = heroButton.getBoundingClientRect().bottom;
-
-    if (buttonPosition < 0) {
-        navButton.classList.remove("d-none");
+    if (window.scrollY > 150) {
+        navButton.classList.add("nav-visible");
     } else {
-        navButton.classList.add("d-none");
+        navButton.classList.remove("nav-visible");
     }
 });

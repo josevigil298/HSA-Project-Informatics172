@@ -23,32 +23,43 @@
                 <div class="step active">
                     <div class="circle">1</div>
                 </div>
-            
+                
+                <div class="line completed"></div> <!-- Line between 1 and 2 -->
+                
                 <div class="step">
                     <div class="circle">2</div>
                 </div>
-            
+                
+                <div class="line"></div> <!-- Line between 2 and 3 -->
+                
                 <div class="step">
                     <div class="circle">3</div>
                 </div>
-            
-                
             
             </div>
 
             <!-- Title Section -->
 
-            <div class="d-flex align-items-center mb-4">
-                <a href="javascript:history.back()" class="me-3 fs-4 text-decoration-none">←</a>
-                <h3 class="fw-semibold mb-0">Educational Module 1: What is an HSA?</h3>
-            </div>
+            <div class="card shadow-sm mb-4 p-4 custom-module-card">
 
-            <div class="card shadow-sm mb-4 p-4">
-                <ul>
-                    <li>What an HSA stands for</li>
-                    <li>Who qualifies</li>
-                    <li>Tax advantages</li>
-                </ul>
+                <!-- Header Section -->
+                <div class="module-header d-flex align-items-center mb-3">
+                    <a href="javascript:history.back()" class="me-3 fs-4 text-decoration-none">← Back</a>
+                    <h3 class="fw-semibold mb-0">Educational Module 1: What is an HSA?</h3>
+                </div>
+            
+                <hr class="module-divider"> <!-- optional horizontal divider -->
+            
+                <!-- Content Section -->
+                <div class="module-content mt-3">
+                    <p>Learning Objectives</p>
+                    <ul>
+                        <li>Understand what a Health Savings Account (HSA) is</li>
+                        <li>Explain the purpose and benefits of an HSA</li>
+                        <li>Know how HSAs can support financial planning</li>
+                    </ul>
+                </div>
+            
             </div>
 
             <div class="card shadow-sm p-4 text-center mb-4">
@@ -58,7 +69,6 @@
             </div>
             
             <div class="d-flex justify-content-end gap-3 mb-3">
-                <a href="../Module-Questions/Module_1_Questions.html" class="btn btn-outline-secondary">Skip</a>
                 <a href = "../Module-Questions/Module_1_Questions.html" class="btn btn-success">Next</a>
             </div>
 
