@@ -254,3 +254,141 @@
       width: 80px;
     }
   }
+
+  /* ===== Make plan look like screenshot checklist ===== */
+
+/* Phase headers (small label + thin divider line) */
+.phase-header{
+  display:flex;
+  align-items:center;
+  gap:14px;
+
+  width:100%;            /* full width */
+  max-width:760px;
+  margin:22px auto 10px auto;
+
+  justify-content:flex-start; /* anchor content left */
+}
+
+.phase-label{
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 900;
+  color: var(--gold);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.phase-rule{
+  height: 1px;
+  flex: 1;
+  background: rgba(0,0,0,0.12);
+}
+
+/* Plan container stays centered like screenshot */
+.plan{
+  max-width: 760px;
+  margin: 0 auto;
+  display:flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Checklist row style */
+.plan-card{
+  display:flex;
+  align-items:flex-start;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* Done row looks like dark bar */
+.plan-card.is-done{
+  background: var(--nav);
+  color: #fff;
+  border-color: rgba(255,255,255,0.08);
+}
+
+/* Left icon column */
+.plan-left{
+  flex: 0 0 44px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  padding-top: 2px;
+}
+
+/* Hide checkbox but keep accessibility */
+.plan-toggle{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* The square badge (number or check) */
+.plan-icon{
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #e7d9b8;
+  color: #2b3b4b;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 900;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Show number by default */
+.plan-icon::before{
+  content: attr(data-num);
+}
+
+/* When checked, show ✓ and “done” colors */
+.plan-toggle:checked + .plan-icon{
+  background: #d2c19a;
+}
+.plan-toggle:checked + .plan-icon::before{
+  content: "✓";
+}
+
+/* Typography */
+.plan-title{
+  margin: 0;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.plan-desc{
+  margin: 6px 0 0;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #4b5563;
+  font-style: italic;
+}
+
+/* Desc text in done rows (lighter) */
+.plan-card.is-done .plan-desc{
+  color: rgba(255,255,255,0.85);
+}
+
+/* Make whole row feel clickable without forcing it */
+.plan-card:hover{
+  transform: translateY(-1px);
+  transition: transform .12s ease;
+}
+
+/* Optional: slightly tighter hero spacing like screenshot */
+.hero-title{
+  font-size: 30px;
+}
+.hero-subtitle{
+  font-size: 13px;
+}
