@@ -1,36 +1,42 @@
+
 /* ===== BODY ===== */
 body {
     padding-top: 70px;
     font-family: sans-serif;
     background-color: #F7F4EE;
-}
-
-/* ===== NAVBAR ===== */
-.navbar {
+  }
+  
+  /* ===== NAVBAR ===== */
+  .navbar {
     background-color: #2F3E4F;
-}
-
-.navbar-brand {
+  }
+  
+  .navbar-brand {
     font-weight: 600;
-}
-
-/* ===== MODULE CONTAINER ===== */
-.module-container {
+  }
+  
+  /* ===== MODULE CONTAINER ===== */
+  .module-container {
     max-width: 900px;
-}
+  }
+  
+  /* ===== STEP PROGRESS ===== */
 
-/* ===== STEP PROGRESS ===== */
-.step-progress {
+  .step-link{
+    text-decoration: none;
+    color: #111827;
+  }
+  .step-progress {
     display: flex;
     align-items: center;
-}
-
-.step {
+  }
+  
+  .step {
     display: flex;
     align-items: center;
-}
-
-.circle {
+  }
+  
+  .circle {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -41,92 +47,106 @@ body {
     justify-content: center;
     font-weight: 600;
     font-size: 13px;
-}
-
-.step.active .circle {
+  }
+  
+  .step.active .circle {
     border-color: #C8A96E;
     background-color: #C8A96E;
-}
-
-.line {
+  }
+  
+  .line {
     flex: 1;
     height: 3px;
     background-color: #e6ddcc;
     margin: 0 10px;
-}
-
-.line.completed {
+  }
+  
+  .line.completed {
     background-color: #C8A96E;
-}
-
-/* ===== BACK BUTTON ===== */
-.btn-back {
+  }
+  
+  /* ===== BACK BUTTON ===== */
+  .btn-back {
     background-color: #5F7A55;
     color: white;
     border-radius: 999px;
     padding: 8px 18px;
     font-weight: 600;
-}
-
-.btn-back:hover {
+  }
+  
+  .btn-back:hover {
     background-color: #4f6847;
     color: white;
-}
-
-/* ===== MODULE CARD ===== */
-.custom-module-card {
+  }
+  
+  /* ===== MODULE CARD ===== */
+  .custom-module-card {
     border-radius: 8px;
     overflow: hidden;
-}
-
-.module-header {
+  }
+  
+  .module-header {
     background-color: #3F5E44;
     padding: 16px 20px;
     color: white;
-}
-
-.module-title {
+  }
+  
+  .module-title {
     font-size: 20px;
     font-weight: 700;
-}
-
-.module-subtitle {
+  }
+  
+  .module-subtitle {
     color: #C8A96E;
     font-style: italic;
-}
-
-.module-content {
+  }
+  
+  .module-content {
     padding: 20px;
-}
-
-.learning-label {
+  }
+  
+  .learning-label {
     font-size: 12px;
     letter-spacing: 1px;
     color: #6b6b6b;
     margin-bottom: 8px;
-}
-
-/* ===== VIDEO SECTION ===== */
-.video-frame {
-    height: 230px;
-    background-color: #2F3E4F;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* play triangle */
-.play-icon {
+  }
+  
+  /* ===== VIDEO SECTION ===== */
+  .video-frame{
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+  
+  .video-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+  
+  .video-container iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* play triangle */
+  .play-icon {
     width: 0;
     height: 0;
     border-left: 18px solid white;
     border-top: 12px solid transparent;
     border-bottom: 12px solid transparent;
-}
-
-/* ===== NEXT BUTTON ===== */
-.btn-next {
+  }
+  
+  /* ===== NEXT BUTTON ===== */
+  .btn-next {
     background-color: #5F7A55;
     color: white;
     border-radius: 999px;
@@ -135,107 +155,191 @@ body {
     text-decoration: none;
     border: none;
     display: inline-block;
-}
-
-.btn-next:hover {
+  }
+  
+  .btn-next:hover {
     background-color: #4f6847;
     color: white;
-}
-
-/* ===================================================== */
-/* ===== COMPREHENSION CHECK STYLES (RESTORED) ===== */
-/* ===================================================== */
-
-.comprehension-card {
+  }
+  
+  /* ===================================================== */
+  /* ===== COMPREHENSION CHECK STYLES ===== */
+  /* ===================================================== */
+  
+  .comprehension-card {
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid #e5e7eb;
-}
-
-/* Green header bar */
-.comprehension-header {
+  }
+  
+  /* Green header bar */
+  .comprehension-header {
     background-color: #3F5E44;
     color: white;
     padding: 14px 18px;
     font-weight: 700;
-}
-
-/* Question label (small gold-ish) */
-.question-label {
+  }
+  
+  /* Question label (small gold-ish) */
+  .question-label {
     font-size: 0.75rem;
     color: #C8A96E;
     letter-spacing: 1px;
     margin-bottom: 8px;
     font-weight: 700;
-}
-
-/* Question text */
-.question-text {
+  }
+  
+  /* Question text */
+  .question-text {
     font-weight: 500;
     color: #1f2937;
     margin-bottom: 14px;
     line-height: 1.5;
-}
-
-/* Answer options */
-.option {
+  }
+  
+  /* Options stack spacing like screenshot */
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* ==========================================
+     Quiz Option Buttons (radio-style look)
+     ========================================== */
+  
+  /* Stop Bootstrap outline styles from turning options blue */
+  .option.btn,
+  .option.btn-outline-primary {
+    background: #ffffff !important;
+    border: 1px solid #eef0f3 !important;
+    color: #111827 !important;
     text-align: left;
+    width: 100%;
     border-radius: 10px;
-    padding: 12px 14px;
-}
-
-/* Selected option state (your JS should toggle .active) */
-.option.active {
-    background-color: #e9ecef;
-    border-color: #dee2e6;
-    color: #111827;
-}
-
-/* Check answer button */
-.btn-check-answer {
+    padding: 12px 14px 12px 44px !important; /* space for radio */
+    position: relative;
+    font-size: 13px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+  
+  /* Remove blue focus ring */
+  .option.btn:focus,
+  .option.btn:active,
+  .option.btn-outline-primary:focus,
+  .option.btn-outline-primary:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Radio circle */
+  .option::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1.8px solid #111827;
+    background: #fff;
+  }
+  
+  /* Selected option look (grey) */
+  .option.active {
+    background: #f1f1f1 !important;
+    border-color: #e5e7eb !important;
+  }
+  
+  /* Fill the radio when selected */
+  .option.active::after {
+    content: "";
+    position: absolute;
+    left: 17.5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #111827;
+  }
+  
+  /* Check answer button */
+  .btn-check-answer {
     background-color: #3F5E44;
     color: white;
     border: none;
     padding: 8px 16px;
     border-radius: 999px;
     font-weight: 600;
-}
-
-.btn-check-answer:hover {
+  }
+  
+  .btn-check-answer:hover {
     background-color: #2e4735;
     color: white;
-}
-
-/* Feedback text area */
-.feedback {
-    min-height: 24px; /* prevents layout jump */
-}
-
-
-/* ===== COMPLETION LAYOUT FIX ===== */
-.completion-wrapper {
-    /* gives the wrapper real vertical space to work with */
-
+  }
+  
+  /* Question actions row */
+  .question-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  
+  /* Feedback text */
+  .feedback {
+    font-weight: 700;
+    font-size: 12px;
+    min-height: 18px; /* prevents layout jump */
+  }
+  
+  .feedback.correct {
+    color: #111827;
+  }
+  
+  .feedback.wrong {
+    color: #b91c1c;
+  }
+  
+  /* Disable look for Check Answer when correct/locked */
+  .btn-check-answer:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+  
+  /* Explanation shown under chosen (or correct) option */
+  .answer-explanation {
+    margin-top: 10px;
+    padding-left: 2px;
+    color: #4b5563;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+  
+  /* ===== COMPLETION LAYOUT FIX ===== */
+  .completion-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px 0;
-}
-
-/* ===== TALLER COMPLETION CARD ===== */
-.completion-card {
+  }
+  
+  /* ===== TALLER COMPLETION CARD ===== */
+  .completion-card {
     background-color: #ffffff;
-    padding: 40px 60px;   /* slightly more side padding */
+    padding: 40px 60px;
     border-radius: 8px;
-
-    max-width: 520px;     /* ← makes the card wider */
+    max-width: 520px;
     width: 100%;
-
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     border: 1px solid #e5e7eb;
-}
-/* green check circle */
-.completion-icon {
+  }
+  
+  /* green check circle */
+  .completion-icon {
     width: 86px;
     height: 86px;
     margin: 0 auto 18px auto;
@@ -246,18 +350,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* green pill continue button */
-.completion-card .btn-primary {
+  }
+  
+  /* green pill continue button */
+  .completion-card .btn-primary {
     background-color: #5F7A55 !important;
     border-color: #5F7A55 !important;
     border-radius: 999px;
     padding: 8px 22px;
     font-weight: 600;
-}
-
-.completion-card .btn-primary:hover {
+  }
+  
+  .completion-card .btn-primary:hover {
     background-color: #4f6847 !important;
     border-color: #4f6847 !important;
-}
+  }

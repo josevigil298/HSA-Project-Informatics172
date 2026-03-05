@@ -1,5 +1,6 @@
 body {
     padding-top: 50px;
+    background-color: #f3f1ed;
 }
 
 /* NAVBAR */
@@ -18,7 +19,9 @@ body {
 
 /* HERO */
 .hero-section {
-    background: linear-gradient(rgba(47,62,79,0.9), rgba(47,62,79,0.9));
+    background:
+        radial-gradient(circle at 25% 30%, rgba(255,255,255,0.12), transparent 45%),
+        linear-gradient(rgba(47,62,79,0.92), rgba(47,62,79,0.92));
     background-size: cover;
     background-position: center;
     min-height: 55vh;
@@ -35,6 +38,10 @@ body {
 .intro-section {
     background-color: #3F5E44;
     color: white;
+}
+
+.intro-section p{
+    line-height: 1.55;
 }
 
 /* SECTION LABEL */
@@ -64,6 +71,17 @@ body {
     text-align: left;
 }
 
+.custom-card h4{
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.custom-card p, 
+.custom-card li{
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
 .divider {
     height: 3px;
     width: 50px;
@@ -87,16 +105,72 @@ body {
     background-color: #f3f1ed;
 }
 
-/* Placeholder screenshot box */
-.placeholder-box {
-    background-color: #d9d9d9;
-    height: 200px;
+.journey-section h2{
+    font-weight: 700;
+}
+
+/* Journey text */
+.journey-section .text-start h4{
+    font-weight: 800;
+    margin-bottom: 0.35rem;
+    color: #1f1f1f;
+}
+
+.journey-section .text-start p{
+    color: #4c4c4c;
+    line-height: 1.5;
+    max-width: 520px;
+}
+
+Journey images
+.journey-img{
+    width: 100%;
+    height: auto;
+    max-height: 260px;
+}
+
+
+/* Journey spacing */
+.journey-section .row{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Journey section divider (grey like screenshot) */
+.journey-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 35px 0;
+}
+
+/* Journey step title layout */
+.journey-step{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 6px;
+}
+
+/* Number circle */
+.step-number{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #c8d3c0;
+    border: 2px solid #3F5E44;
+    color: #2F3E4F;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
-    font-weight: bold;
-    color: #555;
+    font-size: 18px;
+}
+
+/* Step title */
+.journey-step h4{
+    margin: 0;
+    font-weight: 700;
 }
 
 /* FOOTER */
