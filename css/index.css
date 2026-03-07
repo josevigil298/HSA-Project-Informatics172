@@ -1,7 +1,22 @@
+/* GLOBAL FONT SYSTEM */
+
 body {
     padding-top: 50px;
     background-color: #f3f1ed;
+    font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
+
+/* Headings + UI elements use Poppins */
+
+h1, h2, h3, h4, h5, h6,
+.brand,
+.section-label,
+.journey-step h4,
+.custom-card h4,
+.button-start {
+    font-family: "Poppins", system-ui, sans-serif;
+}
+
 
 /* TOPBAR / NAVBAR */
 .topbar,
@@ -160,7 +175,7 @@ body {
     padding-bottom: 10px;
 }
 
-/* Journey section divider (grey like screenshot) */
+/* Journey section divider */
 .journey-divider {
     width: 100%;
     height: 1px;
