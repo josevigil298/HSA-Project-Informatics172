@@ -33,4 +33,7 @@ continueBtn.addEventListener('click', () => {
     else if (selectedValue === "Dependently") {
         window.location.href = "../Result-Question/Next-Step.html";
     }
+    else if (selectedValue === "Other") {
+        window.location.href = "../personal-questions/Personal-Questionnaire-Q4.html";
+    }
 });

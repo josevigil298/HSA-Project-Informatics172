@@ -3,9 +3,31 @@ body {
     background-color: #f3f1ed;
 }
 
-/* NAVBAR */
+/* TOPBAR / NAVBAR */
+.topbar,
 .navbar {
     background-color: #2F3E4F;
+    min-height: 64px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+}
+
+.topbar-inner {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+}
+
+.brand {
+    color: #fff;
+    font-weight: 800;
+    font-size: 19px;
+}
+
+.brand-accent {
+    color: #D4A857;
 }
 
 .nav-hidden {
@@ -122,13 +144,15 @@ body {
     max-width: 520px;
 }
 
-Journey images
+/* Journey images */
 .journey-img{
     width: 100%;
+    max-width: 520px;
     height: auto;
-    max-height: 260px;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
 }
-
 
 /* Journey spacing */
 .journey-section .row{

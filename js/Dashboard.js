@@ -47,3 +47,101 @@ faqRows.forEach((row) => {
     }
   });
 });
+
+
+
+// ---------- Resource Hub ----------
+const resourceScroll = document.getElementById("resourceScroll");
+const resourcePrev = document.getElementById("resourcePrev");
+const resourceNext = document.getElementById("resourceNext");
+const resourceDotsContainer = document.getElementById("resourceDots");
+
+const CARDS_PER_PAGE = 3;
+
+function getCards(){
+  return Array.from(document.querySelectorAll(".resource-card"));
+}
+
+function getCardWidth(){
+  const card = resourceScroll.querySelector(".resource-card");
+  if(!card) return 200;
+  return card.offsetWidth + 18;
+}
+
+function getPageWidth(){
+  return getCardWidth() * CARDS_PER_PAGE;
+}
+
+function getTotalPages(){
+  return Math.ceil(getCards().length / CARDS_PER_PAGE);
+}
+
+function getCurrentPage(){
+  return Math.round(resourceScroll.scrollLeft / getPageWidth());
+}
+
+// ---------- Create dots dynamically ----------
+function createDots(){
+
+  const pages = getTotalPages();
+  resourceDotsContainer.innerHTML = "";
+
+  for(let i = 0; i < pages; i++){
+
+    const dot = document.createElement("span");
+    dot.className = "resource-dot";
+
+    if(i === 0){
+      dot.classList.add("active");
+    }
+
+    dot.addEventListener("click", () => {
+      scrollToPage(i);
+    });
+
+    resourceDotsContainer.appendChild(dot);
+  }
+
+}
+
+function updateDots(){
+
+  const dots = Array.from(document.querySelectorAll(".resource-dot"));
+  const page = getCurrentPage();
+
+  dots.forEach((dot,i)=>{
+    dot.classList.toggle("active", i === page);
+  });
+
+}
+
+function scrollToPage(page){
+
+  const maxPage = getTotalPages() - 1;
+  const safePage = Math.max(0, Math.min(page, maxPage));
+
+  resourceScroll.scrollTo({
+    left: safePage * getPageWidth(),
+    behavior: "smooth"
+  });
+
+}
+
+// ---------- Arrow controls ----------
+resourcePrev?.addEventListener("click", ()=>{
+  scrollToPage(getCurrentPage() - 1);
+});
+
+resourceNext?.addEventListener("click", ()=>{
+  scrollToPage(getCurrentPage() + 1);
+});
+
+// ---------- Events ----------
+resourceScroll?.addEventListener("scroll", updateDots);
+
+window.addEventListener("load", ()=>{
+  createDots();
+  updateDots();
+});
+
+window.addEventListener("resize", updateDots);

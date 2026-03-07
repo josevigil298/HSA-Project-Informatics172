@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Action Plan</title>
 
-  <link rel="stylesheet" href="../../css/Next-Step.css" />
+  <link rel="stylesheet" href="../../css/Next-Step.css">
 </head>
 <body>
 
   <!-- Top Nav -->
-  <nav class="topbar">
-    <div class="topbar-inner">
-      <a href = "../../index.html"><div class="brand">HSA<span class="brand-accent">Next</span></div></a>
+  <nav class="topbar navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="topbar-inner container">
+      <a class="navbar-brand fw-bold brand" href="../../index.html">
+        HSA<span class="brand-accent">Next</span>
+      </a>
     </div>
   </nav>
 
@@ -36,7 +38,7 @@
         </h1>
 
         <p class="hero-subtitle">
-          You file taxes independently and are insured, which is great. 
+          You file taxes independently and are insured, which is great.
           The only thing standing between you and your HSA is being enrolled in an HDHP.
           Once you change your plan, you’ll be fully eligible to contribute.
         </p>
@@ -44,64 +46,62 @@
 
       <!-- Action Plan -->
       <section class="section">
+
         <!-- PHASE 1 -->
         <div class="phase-header">
           <span class="phase-label">PHASE 1: TAX INDEPENDENCE TEST</span>
           <span class="phase-rule"></span>
         </div>
-      
+
         <div class="plan">
-      
-          <!-- Step 1 -->
           <article class="plan-card is-done">
             <div class="plan-left">
               <input class="plan-toggle" type="checkbox" id="step1" checked>
               <label class="plan-icon" for="step1" data-num="1" aria-label="Toggle step 1"></label>
             </div>
-      
+
             <div class="plan-body">
               <h3 class="plan-title">Your tax filing status must be independent.</h3>
             </div>
           </article>
-      
-          <!-- PHASE 2 -->
+        </div>
+
+        <!-- PHASE 2 -->
         <div class="phase-header">
           <span class="phase-label">PHASE 2: INSURANCE COMPATIBILITY</span>
           <span class="phase-rule"></span>
         </div>
-      
-          <!-- Step 2 -->
+
+        <div class="plan">
           <article class="plan-card">
             <div class="plan-left">
               <input class="plan-toggle" type="checkbox" id="step2">
               <label class="plan-icon" for="step2" data-num="2" aria-label="Toggle step 2"></label>
             </div>
-      
+
             <div class="plan-body">
               <h3 class="plan-title">Leave your current plan or wait for it to end.</h3>
               <p class="plan-desc">Your current plan is not an HDHP.</p>
             </div>
           </article>
-      
-          <!-- Step 3 -->
+
           <article class="plan-card">
             <div class="plan-left">
               <input class="plan-toggle" type="checkbox" id="step3">
               <label class="plan-icon" for="step3" data-num="3" aria-label="Toggle step 3"></label>
             </div>
-      
+
             <div class="plan-body">
               <h3 class="plan-title">Enroll in an HDHP through an employer or the health insurance marketplace.</h3>
             </div>
           </article>
-      
-          <!-- Step 4 -->
+
           <article class="plan-card">
             <div class="plan-left">
               <input class="plan-toggle" type="checkbox" id="step4">
               <label class="plan-icon" for="step4" data-num="4" aria-label="Toggle step 4"></label>
             </div>
-      
+
             <div class="plan-body">
               <h3 class="plan-title">Once enrolled, you can open your HSA.</h3>
               <p class="plan-desc">
@@ -109,20 +109,21 @@
               </p>
             </div>
           </article>
-      
-          <!-- PHASE 3 -->
-          <div class="phase-header">
-            <span class="phase-label">PHASE 3: THE PREP WORK</span>
-            <span class="phase-rule"></span>
-          </div>
-      
-          <!-- Step 5 -->
+        </div>
+
+        <!-- PHASE 3 -->
+        <div class="phase-header">
+          <span class="phase-label">PHASE 3: THE PREP WORK</span>
+          <span class="phase-rule"></span>
+        </div>
+
+        <div class="plan">
           <article class="plan-card">
             <div class="plan-left">
               <input class="plan-toggle" type="checkbox" id="step5">
               <label class="plan-icon" for="step5" data-num="5" aria-label="Toggle step 5"></label>
             </div>
-      
+
             <div class="plan-body">
               <h3 class="plan-title">
                 Build a deductible buffer: Open a High-Yield Savings Account and save at least $1750 ($1700/individual in 2026).
@@ -130,32 +131,30 @@
               <p class="plan-desc">The IRS minimum deductible for HSA-eligible plans updates annually.</p>
             </div>
           </article>
-      
-          <!-- Step 6 -->
+
           <article class="plan-card">
             <div class="plan-left">
               <input class="plan-toggle" type="checkbox" id="step6">
               <label class="plan-icon" for="step6" data-num="6" aria-label="Toggle step 6"></label>
             </div>
-      
+
             <div class="plan-body">
               <h3 class="plan-title">You may start setting a small monthly amount to build your deductible buffer.</h3>
             </div>
           </article>
-      
-          <!-- Step 7 -->
+
           <article class="plan-card">
             <div class="plan-left">
               <input class="plan-toggle" type="checkbox" id="step7">
               <label class="plan-icon" for="step7" data-num="7" aria-label="Toggle step 7"></label>
             </div>
-      
+
             <div class="plan-body">
               <h3 class="plan-title">Keep a medical paper trail to track healthcare spending/needs.</h3>
             </div>
           </article>
-      
         </div>
+
       </section>
 
       <!-- Footer Button -->

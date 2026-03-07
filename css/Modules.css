@@ -1,19 +1,41 @@
 
 /* ===== BODY ===== */
 body {
-    padding-top: 70px;
-    font-family: sans-serif;
-    background-color: #F7F4EE;
-  }
-  
-  /* ===== NAVBAR ===== */
-  .navbar {
-    background-color: #2F3E4F;
-  }
-  
-  .navbar-brand {
-    font-weight: 600;
-  }
+  padding-top: 70px;
+  font-family: sans-serif;
+  background-color: #F7F4EE;
+}
+
+/* ===== TOPBAR / NAVBAR ===== */
+.topbar,
+.navbar {
+  background-color: #2F3E4F;
+  min-height: 64px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+}
+
+.topbar-inner {
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  color: #fff !important;
+  font-weight: 800;
+  font-size: 19px;
+}
+
+.brand-accent {
+  color: #C8A96E;
+}
+
+.navbar-brand {
+  font-weight: 600;
+}
   
   /* ===== MODULE CONTAINER ===== */
   .module-container {
