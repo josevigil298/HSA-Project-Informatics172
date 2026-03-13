@@ -185,7 +185,7 @@ function getFinalRoute(answers) {
 
 function goToLoadingScreen(finalRoute) {
   saveFinalRoute(finalRoute);
-  window.location.href = "../personal-questions/Loading.html";
+  window.location.href = "../personal-questions/loading.html";
 }
 
 function goToNextQuestion(questionNumber) {
