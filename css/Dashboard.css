@@ -111,7 +111,7 @@ a{
   margin: 0 0 16px;
   font-size: 12px;
   font-style: italic;
-  color: #1f2937;
+  color: #5f6f59;
 }
 
 .phase-reminder{
@@ -119,6 +119,7 @@ a{
   font-size: 11px;
   font-style: italic;
   line-height: 1.45;
+  color: #5f6f59;
 }
 
 .path-list{
@@ -127,18 +128,24 @@ a{
   gap: 18px;
 }
 
-.path-item{
-  display: grid;
-  grid-template-columns: 22px 1fr;
-  gap: 10px;
-  align-items: start;
+.path-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
 }
 
-.path-num{
-  font-size: 42px;
-  line-height: 0.9;
-  color: var(--gold);
-  font-weight: 300;
+.path-num {
+  flex: 0 0 42px;      /* space reserved for numbers */
+  width: 42px;
+  text-align: center;
+  font-size: 26px;     /* bigger number */
+  font-weight: 600;
+  line-height: 1;
+  color: #C8A96E;
+}
+
+.path-text {
+  flex: 1;
 }
 
 .path-item-done .path-num{
@@ -516,4 +523,37 @@ a{
 /* only hide the line on the expanded panel */
 .rule-panel.is-active::after{
   display: none;
+}
+
+/* Info Button */
+.info-btn {
+  background: none;
+  border: none;
+  color: #5F7A55;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0 0 0 4px;
+  vertical-align: middle;
+}
+
+.info-btn:hover {
+  color: #4f6847;
+}
+
+.path-text {
+  position: relative;
+}
+
+.info-popup {
+  margin-top: 8px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #374151;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  max-width: 360px;
 }

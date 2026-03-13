@@ -48,7 +48,45 @@ faqRows.forEach((row) => {
   });
 });
 
+// ---------- Info popup ----------
+const infoButtons = Array.from(document.querySelectorAll('.info-btn'));
 
+infoButtons.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+
+    const popup = btn.nextElementSibling;
+    if (!popup || !popup.classList.contains('info-popup')) return;
+
+    const isOpen = !popup.hasAttribute('hidden');
+
+    // close all popups first
+    document.querySelectorAll('.info-popup').forEach((p) => {
+      p.setAttribute('hidden', '');
+    });
+    document.querySelectorAll('.info-btn').forEach((b) => {
+      b.setAttribute('aria-expanded', 'false');
+    });
+
+    // open clicked popup if it was closed
+    if (!isOpen) {
+      popup.removeAttribute('hidden');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// close popup when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.info-btn') && !e.target.closest('.info-popup')) {
+    document.querySelectorAll('.info-popup').forEach((p) => {
+      p.setAttribute('hidden', '');
+    });
+    document.querySelectorAll('.info-btn').forEach((b) => {
+      b.setAttribute('aria-expanded', 'false');
+    });
+  }
+});
 
 // ---------- Resource Hub ----------
 const resourceScroll = document.getElementById("resourceScroll");
@@ -58,40 +96,41 @@ const resourceDotsContainer = document.getElementById("resourceDots");
 
 const CARDS_PER_PAGE = 3;
 
-function getCards(){
+function getCards() {
   return Array.from(document.querySelectorAll(".resource-card"));
 }
 
-function getCardWidth(){
-  const card = resourceScroll.querySelector(".resource-card");
-  if(!card) return 200;
+function getCardWidth() {
+  const card = resourceScroll?.querySelector(".resource-card");
+  if (!card) return 200;
   return card.offsetWidth + 18;
 }
 
-function getPageWidth(){
+function getPageWidth() {
   return getCardWidth() * CARDS_PER_PAGE;
 }
 
-function getTotalPages(){
+function getTotalPages() {
   return Math.ceil(getCards().length / CARDS_PER_PAGE);
 }
 
-function getCurrentPage(){
+function getCurrentPage() {
+  if (!resourceScroll) return 0;
   return Math.round(resourceScroll.scrollLeft / getPageWidth());
 }
 
 // ---------- Create dots dynamically ----------
-function createDots(){
+function createDots() {
+  if (!resourceDotsContainer) return;
 
   const pages = getTotalPages();
   resourceDotsContainer.innerHTML = "";
 
-  for(let i = 0; i < pages; i++){
-
+  for (let i = 0; i < pages; i++) {
     const dot = document.createElement("span");
     dot.className = "resource-dot";
 
-    if(i === 0){
+    if (i === 0) {
       dot.classList.add("active");
     }
 
@@ -101,21 +140,19 @@ function createDots(){
 
     resourceDotsContainer.appendChild(dot);
   }
-
 }
 
-function updateDots(){
-
+function updateDots() {
   const dots = Array.from(document.querySelectorAll(".resource-dot"));
   const page = getCurrentPage();
 
-  dots.forEach((dot,i)=>{
+  dots.forEach((dot, i) => {
     dot.classList.toggle("active", i === page);
   });
-
 }
 
-function scrollToPage(page){
+function scrollToPage(page) {
+  if (!resourceScroll) return;
 
   const maxPage = getTotalPages() - 1;
   const safePage = Math.max(0, Math.min(page, maxPage));
@@ -124,22 +161,21 @@ function scrollToPage(page){
     left: safePage * getPageWidth(),
     behavior: "smooth"
   });
-
 }
 
 // ---------- Arrow controls ----------
-resourcePrev?.addEventListener("click", ()=>{
+resourcePrev?.addEventListener("click", () => {
   scrollToPage(getCurrentPage() - 1);
 });
 
-resourceNext?.addEventListener("click", ()=>{
+resourceNext?.addEventListener("click", () => {
   scrollToPage(getCurrentPage() + 1);
 });
 
 // ---------- Events ----------
 resourceScroll?.addEventListener("scroll", updateDots);
 
-window.addEventListener("load", ()=>{
+window.addEventListener("load", () => {
   createDots();
   updateDots();
 });

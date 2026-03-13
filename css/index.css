@@ -1,24 +1,24 @@
-/* GLOBAL FONT SYSTEM */
-
+/* ========== GLOBAL ========== */
 body {
-    padding-top: 50px;
+    padding-top: 64px;
     background-color: #f3f1ed;
     font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    color: #1f1f1f;
 }
-
-/* Headings + UI elements use Poppins */
 
 h1, h2, h3, h4, h5, h6,
 .brand,
 .section-label,
-.journey-step h4,
-.custom-card h4,
-.button-start {
+.button-start,
+.step-number {
     font-family: "Poppins", system-ui, sans-serif;
 }
 
+p, li, small, a {
+    font-family: "Inter", system-ui, sans-serif;
+}
 
-/* TOPBAR / NAVBAR */
+/* ========== NAVBAR ========== */
 .topbar,
 .navbar {
     background-color: #2F3E4F;
@@ -33,12 +33,13 @@ h1, h2, h3, h4, h5, h6,
     padding: 0 24px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .brand {
     color: #fff;
     font-weight: 800;
-    font-size: 19px;
+    font-size: 1.2rem;
 }
 
 .brand-accent {
@@ -54,165 +55,316 @@ h1, h2, h3, h4, h5, h6,
     opacity: 1;
 }
 
-/* HERO */
+/* ========== BUTTONS ========== */
+.button-start {
+    background-color: #6B8F61;
+    border: none;
+    border-radius: 100px;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+}
+
+.button-start:hover {
+    background-color: #5c7c54;
+}
+
+/* ========== HERO ========== */
 .hero-section {
     background:
-        radial-gradient(circle at 25% 30%, rgba(255,255,255,0.12), transparent 45%),
-        linear-gradient(rgba(47,62,79,0.92), rgba(47,62,79,0.92));
-    background-size: cover;
-    background-position: center;
-    min-height: 55vh;
-    padding: 4rem 0;
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08), transparent 35%),
+        radial-gradient(circle at 80% 30%, rgba(255,255,255,0.06), transparent 32%),
+        linear-gradient(90deg, #33485A 0%, #2F3E4F 100%);
+    min-height: 520px;
+    display: flex;
+    align-items: stretch; /* changed from center */
+    border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 
-.button-start{
-    background-color: #6B8F61;
-    border: #6B8F61;
-    border-radius: 100px;
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: end;
+    gap: 1.5rem;
 }
 
-/* GREEN INTRO SECTION */
+.hero-content {
+    align-self: center;
+    padding: 2rem 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+}
+
+.hero-subtitle {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #f1f1f1;
+}
+
+.hero-graphic {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    min-height: 260px;
+}
+
+.hero-side-img {
+    max-width: 100%;
+    max-height: 320px;
+    object-fit: contain;
+    display: block;
+}
+
+/* ========== INTRO SECTION ========== */
 .intro-section {
     background-color: #3F5E44;
     color: white;
 }
 
-.intro-section p{
-    line-height: 1.55;
+.intro-section h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.3;
 }
 
-/* SECTION LABEL */
-.section-label {
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    color: #6c757d;
+.intro-block h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.65rem;
 }
 
-/* HIGHLIGHT COLOR */
+.intro-block p {
+    line-height: 1.7;
+    font-size: 1rem;
+    max-width: 1100px;
+}
+
 .highlight-text {
     color: #D4A857;
 }
 
-/* WHY SECTION */
+/* ========== SECTION LABEL ========== */
+.section-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #7b8b77;
+    text-transform: uppercase;
+    margin-bottom: 0.7rem;
+}
+
+/* ========== WHY SECTION ========== */
 .why-section {
     background-color: #f3f1ed;
 }
 
-/* CARDS */
+.why-section h2 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+/* ========== CARDS ========== */
 .custom-card {
-    background-color: #3F5E44;
+    background-color: #476946;
     color: white;
     border: none;
-    border-radius: 10px;
-    padding: 2.5rem 1.5rem;
+    border-radius: 12px;
     text-align: left;
+    min-height: 100%;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 
-.custom-card h4{
+.custom-card h4 {
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: 1.55rem;
+    line-height: 1.35;
+    margin-bottom: 0.75rem;
 }
 
-.custom-card p, 
-.custom-card li{
-    font-size: 0.95rem;
-    line-height: 1.5;
+.custom-card p,
+.custom-card li {
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+.card-subtext {
+    font-size: 0.92rem !important;
+    opacity: 0.95;
 }
 
 .divider {
     height: 3px;
-    width: 50px;
+    width: 54px;
     background-color: #D4A857;
-    margin: 0.75rem 0 1rem 0;
+    margin: 0.9rem 0 1rem 0;
     border-radius: 5px;
 }
 
 .light-card {
-    background-color: #c8d3c0;
-    color: black;
+    background-color: #cad7c1;
+    color: #1f1f1f;
 }
 
-.dark-card{
-    background-color: #2F3E4F;
+.dark-card {
+    background-color: #32485e;
     color: white;
 }
 
-/* JOURNEY SECTION */
+.custom-card ul {
+    padding-left: 1.1rem;
+    margin-bottom: 0;
+}
+
+/* ========== JOURNEY SECTION ========== */
 .journey-section {
     background-color: #f3f1ed;
 }
 
-.journey-section h2{
-    font-weight: 700;
-}
-
-/* Journey text */
-.journey-section .text-start h4{
+.journey-section h2 {
+    font-size: 2.25rem;
     font-weight: 800;
-    margin-bottom: 0.35rem;
-    color: #1f1f1f;
 }
 
-.journey-section .text-start p{
-    color: #4c4c4c;
-    line-height: 1.5;
+.journey-section .text-start h4 {
+    font-weight: 800;
+    margin-bottom: 0.45rem;
+    color: #1f1f1f;
+    font-size: 2rem;
+}
+
+.journey-section .text-start p {
+    color: #444;
+    line-height: 1.6;
     max-width: 520px;
+    font-size: 1rem;
+}
+
+.journey-emphasis {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4rem !important;
+    font-weight: 600;
+    color: #222 !important;
+    margin-bottom: 0.75rem;
+}
+
+.highlight-green {
+    color: #6B8F61;
 }
 
 /* Journey images */
-.journey-img{
+.journey-img {
     width: 100%;
     max-width: 520px;
     height: auto;
     display: block;
     margin: 0 auto;
     object-fit: contain;
-}
-
-/* Journey spacing */
-.journey-section .row{
-    padding-top: 10px;
-    padding-bottom: 10px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    border: 1px solid #ddd;
+    background: white;
 }
 
 /* Journey section divider */
 .journey-divider {
     width: 100%;
     height: 1px;
-    background-color: #dcdcdc;
-    margin: 35px 0;
+    background-color: #d9d9d9;
+    margin: 40px 0;
 }
 
-/* Journey step title layout */
-.journey-step{
+/* Journey step */
+.journey-step {
     display: flex;
     align-items: center;
     gap: 14px;
     margin-bottom: 6px;
 }
 
-/* Number circle */
-.step-number{
-    width: 44px;
-    height: 44px;
+.step-number {
+    width: 54px;
+    height: 54px;
     border-radius: 50%;
-    background-color: #c8d3c0;
-    border: 2px solid #3F5E44;
+    background-color: #d4e1cc;
+    border: 2px solid #557453;
     color: #2F3E4F;
     font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 1.7rem;
 }
 
-/* Step title */
-.journey-step h4{
-    margin: 0;
-    font-weight: 700;
-}
-
-/* FOOTER */
+/* ========== FOOTER ========== */
 .footer {
     background-color: #2F3E4F;
+}
+
+.footer h5 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    margin-bottom: 0.35rem;
+}
+
+.footer small {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.92rem;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 991px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-graphic {
+        min-height: unset;
+    }
+
+    .hero-left,
+    .hero-right {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .journey-section .text-start h4 {
+        font-size: 1.6rem;
+    }
+
+    .journey-emphasis {
+        font-size: 1.15rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 430px;
+        padding: 2rem 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .intro-section h2,
+    .why-section h2,
+    .journey-section h2 {
+        font-size: 1.7rem;
+    }
+
+    .custom-card h4 {
+        font-size: 1.25rem;
+    }
 }

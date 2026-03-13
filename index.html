@@ -1,193 +1,222 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name = "author" content = "Jose Vigil">
-        <meta name = "description" content = "Welcome to HSANext's Homepage">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href = "css/index.css">
-        <title>Homepage - HSANext</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jose Vigil">
+    <meta name="description" content="Welcome to HSANext's Homepage">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- NAVBAR -->
-        <nav class="topbar navbar navbar-expand-lg navbar-dark fixed-top">
-            <div class="topbar-inner container">
-          
-              <!-- Logo / Brand -->
-              <a class="navbar-brand fw-bold brand" href="#">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>Homepage - HSANext</title>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="topbar navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="topbar-inner container">
+            <a class="navbar-brand fw-bold brand" href="#">
                 HSA<span class="brand-accent">Next</span>
-              </a>
-          
-              <!-- Right Button -->
-              <a href="pages/Module-Education/Module_1.html"
-                 id="navButton"
-                 class="btn btn-success px-4 nav-hidden button-start">
+            </a>
+
+            <a href="pages/Module-Education/Module_1.html"
+               id="navButton"
+               class="btn btn-success px-4 nav-hidden button-start">
                 Get Started
-              </a>
-          
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section text-white">
+        <div class="container hero-container">
+            
+            <!-- Left placeholder image -->
+            <div class="hero-graphic hero-left">
+                <img src="img/undraw_education_3vwh.svg" alt="Left hero illustration" class="hero-side-img">
             </div>
-          </nav>
-        
-        <!-- HERO SECTION -->
-        <section class="hero-section text-center text-white d-flex align-items-center">
-            <div class="container">
-                <h1 class="fw-bold">Welcome to HSA<span class="brand-accent">Next</span></h1>
-                <p class="lead mb-4">Your Financial Health Journey Starts Here!</p>
+
+            <!-- Center hero text -->
+            <div class="hero-content text-center">
+                <h1 class="fw-bold">
+                    Welcome to HSA<span class="brand-accent">Next</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Make sense of health savings, step by step.
+                </p>
                 <a href="pages/Module-Education/Module_1.html" class="btn btn-success px-4 button-start">
-                    Get Started
+                    Begin Your HSA Journey
                 </a>
             </div>
-        </section>
-        
-        <!-- GREEN INTRO SECTION -->
-        <section class="intro-section py-5">
-            <div class="container">
-                <h2 class="fw-bold">
-                    Are You Graduating Soon?
-                    <span class="highlight-text">Want To Save Money?</span>
-                </h2>
-        
-                <p class="mt-4">
-                    The transition from college to the real world is one of the most stressful life events a young adult can face, especially regarding health and finances.
-                    Most existing financial tools are designed for established professionals, leaving students in a 'pre-eligibility' limbo where they lack the guidance to start early.
-                    While the focus of healthcare is often on treating illness, we believe that financial wellness is preventative care. 
-                    We’ve seen how the complexity of postgraduate life can lead to "administrative burden" and health-avoidance behaviors, so we built this platform to bridge the gap between graduation and long-term health stability.
+
+            <!-- Right placeholder image -->
+            <div class="hero-graphic hero-right">
+                <img src="img/undraw_savings_d97f.svg" alt="Left hero illustration" class="hero-side-img">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INTRO SECTION -->
+    <section class="intro-section py-5">
+        <div class="container">
+            <h2 class="fw-bold">
+                Are You Graduating Soon?
+                <span class="highlight-text"><em>Worried About Health Finances?</em></span>
+            </h2>
+
+            <div class="intro-block mt-4">
+                <h3>About Us:</h3>
+                <p>
+                    We are a team of Health Informatics students dedicated to improving access to health and financial planning tools for young adults, helping them understand and prepare for Health Savings Account (HSA) eligibility. We recognize that the transition from college to the workforce can be overwhelming, especially when it comes to understanding health insurance and financial responsibilities. Most existing financial tools are designed for established professionals, leaving students with little guidance as they prepare for independence. We created this platform to provide personalized guidance that helps students determine their HSA eligibility and take the steps needed to get started.
                 </p>
-                <p class="mt-4">
-                    We aim to equip the next generation of professionals with the tools and health-literacy required to navigate High-Deductible Health Plans (HDHPs) and Health Savings Accounts (HSAs). 
-                    By introducing HSAs early, we aim to transform financial literacy into a proactive health strategy.
+            </div>
+
+            <div class="intro-block mt-4">
+                <h3>Purpose:</h3>
+                <p>
+                    Many students are unsure of when they can open a Health Savings Account (HSA) or how to prepare for one. Our platform simplifies this process with personalized pathways based on tax and insurance status, guiding users through educational modules and an eligibility questionnaire. We aim to make the HSA process clear, actionable, and confidence-building.
                 </p>
             </div>
-        </section>
-        
-        <!-- WHY HSA SECTION -->
-        <section class="why-section py-5">
-            <div class="container text-center">
-                <p class="section-label">HEALTH SAVINGS ACCOUNT</p>
-                <h2 class="fw-bold mb-5">
-                    Why Should Post-Grads Prepare <br>
-                    for <span class="highlight-text">an HSA?</span>
-                </h2>
-        
-                <div class="row justify-content-center g-5">
-                    <div class="col-md-4">
-                        <div class="card custom-card h-100 p-5">
-                            <h4>Combatting Financial Anxiety</h4>
-                            <p>Nearly 60% of Gen Z and Millennials report anxiety over money. </p>
-                            <div class="divider"></div>
-                            <p>Practice primary prevention against anxiety by securing a dedicated fund for medical costs</p>
-                        </div>
-                    </div>
-        
-                    <div class="col-md-4">
-                        <div class="card custom-card h-100 p-5 light-card">
-                            <h4>The Triple-Zero Tax Advantage</h4>
-                            <p>An HSA is the only account where the IRS gets nothing.</p>
-                            <div class="divider"></div>
-                            <ul>
-                                <li>
-                                    $0 Tax on Deposits: Every dollar you put in is not taxed, meaning you keep more of your paycheck.
-                                </li>
-                                <li>
-                                    $0 Tax on Growth: Any interest you earn stays in your pocket.
-                                </li>
-                                <li>
-                                    $0 Tax on Care: When you use it for doctor's visits or prescriptions, you don’t pay a cent in taxes
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-        
-                    <div class="col-md-4">
-                        <div class="card custom-card h-100 p-5 dark-card">
-                            <h4>Future-Proofing Your Health</h4>
-                            <p>Post-grad life is full of job changes.</p>
-                            <div class="divider"></div>
-                            <p>Unlike employer-tied insurance, an HSA is portable. It stays with you, ensuring that no matter where your career takes you, your ability to afford care remains constant</p>
-                        </div>
+        </div>
+    </section>
+
+    <!-- WHY HSA SECTION -->
+    <section class="why-section py-5">
+        <div class="container text-center">
+            <p class="section-label">HEALTH SAVINGS ACCOUNT</p>
+            <h2 class="fw-bold mb-5">
+                Why Should Post-Grads Prepare <br>
+                for <span class="highlight-text"><em>an HSA?</em></span>
+            </h2>
+
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4">
+                    <div class="card custom-card h-100 p-4">
+                        <h4>Combatting Financial Anxiety</h4>
+                        <p class="card-subtext">Nearly 60% of Gen Z and Millennials report anxiety over money.</p>
+                        <div class="divider"></div>
+                        <p>
+                            Practice primary prevention against anxiety by securing a dedicated, tax-free fund for medical costs through an HSA, so you’re prepared before a bill ever arrives.
+                        </p>
                     </div>
                 </div>
-            </div>
-        </section>
-        
-       <!-- JOURNEY SECTION -->
-<!-- JOURNEY SECTION -->
-<section class="journey-section py-5">
-    <div class="container text-center">
-        <p class="section-label">THE JOURNEY</p>
-        <h2 class="fw-bold mb-5">
-            How Our Platform <span class="highlight-text">Works</span>
-        </h2>
 
-        <!-- STEP 1 -->
-        <div class="row align-items-center mb-5 gx-5">
-            <div class="col-md-6 text-start">
-                <div class="journey-step mb-3">
-                    <div class="step-number">1</div>
+                <div class="col-md-4">
+                    <div class="card custom-card h-100 p-4 light-card">
+                        <h4>The Triple-Zero Tax Advantage</h4>
+                        <p class="card-subtext">Most savings accounts are taxed for every deposit, growth, or care.</p>
+                        <div class="divider"></div>
+                        <p>
+                            An HSA is the only account where the IRS gets nothing:
+                        </p>
+                        <ul>
+                            <li><strong>$0 Tax on Deposits:</strong> Every dollar you put in is not taxed.</li>
+                            <li><strong>$0 Tax on Growth:</strong> Any interest you earn stays in your account.</li>
+                            <li><strong>$0 Tax on Care:</strong> Qualified medical spending stays tax-free.</li>
+                        </ul>
+                    </div>
                 </div>
-                <h4>Educational Modules</h4>
-                <h5>Don't Know what an HSA is?</h5>
-                <h5>No Problem!</h5>
-                <p>We’ll begin with small lessons and learning checks to get you situated with the topic of Health Savings Accounts and other related topics.</p>
-            </div>
-            <div class="col-md-6">
-                <img src="img/Education-Module-img.webp" class="img-fluid rounded journey-img" alt="Education Module Screenshot">
+
+                <div class="col-md-4">
+                    <div class="card custom-card h-100 p-4 dark-card">
+                        <h4>Future-Proofing Your Health</h4>
+                        <p class="card-subtext">Post-grad life is full of job changes — and most health coverage doesn’t follow you when you leave.</p>
+                        <div class="divider"></div>
+                        <p>
+                            Unlike employer-tied insurance, an HSA is portable. It stays with you, ensuring that no matter where your career takes you, your ability to afford care remains constant.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- DIVIDER -->
-        <div class="journey-divider"></div>
+    <!-- JOURNEY SECTION -->
+    <section class="journey-section py-5">
+        <div class="container text-center">
+            <p class="section-label">THE JOURNEY</p>
+            <h2 class="fw-bold mb-5">
+                How Our Platform <span class="highlight-text"><em>Works</em></span>
+            </h2>
 
-        <!-- STEP 2 -->
-        <div class="row align-items-center mb-5 gx-5 mt-5">
-            <div class="col-md-6 order-md-2 text-start">
-                <div class="journey-step mb-3">
-                    <div class="step-number">2</div>
+            <!-- STEP 1 -->
+            <div class="row align-items-center mb-5 gx-5">
+                <div class="col-md-6 text-start">
+                    <div class="journey-step mb-3">
+                        <div class="step-number">1</div>
+                    </div>
+                    <h4>Educational Modules</h4>
+                    <p class="journey-emphasis">
+                        Don’t Know what an HSA is? <span class="highlight-green"><em>No Problem!</em></span>
+                    </p>
+                    <p>
+                        We’ll begin with small lessons and learning checks to get you situated with the topic of Health Savings Accounts and other related topics.
+                    </p>
                 </div>
-                <h4>Personal Questionnaire</h4>
-                <h5>Not Eligible Yet?</h5>
-                <h5>Get Prepared!</h5>
-                <p>We will ask you a short series of questions to understand your current finance background and give you exactly what you need.</p>
+                <div class="col-md-6">
+                    <img src="img/Education-Module-img.webp" class="img-fluid rounded journey-img" alt="Education Module Screenshot">
+                </div>
             </div>
-            <div class="col-md-6 order-md-1">
-                <img src="img/Personal-Questionnaire-img.webp" class="img-fluid rounded journey-img" alt="Personal Questions Screenshot">
+
+            <div class="journey-divider"></div>
+
+            <!-- STEP 2 -->
+            <div class="row align-items-center mb-5 gx-5 mt-5">
+                <div class="col-md-6 order-md-2 text-start">
+                    <div class="journey-step mb-3">
+                        <div class="step-number">2</div>
+                    </div>
+                    <h4>Personal Questionnaire</h4>
+                    <p class="journey-emphasis">
+                        Not Eligible Yet? <span class="highlight-green"><em>Get Prepared!</em></span>
+                    </p>
+                    <p>
+                        We will ask you a short series of questions to understand your current finance background and give you exactly what you need.
+                    </p>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <img src="img/Personal-Questionnaire-img.webp" class="img-fluid rounded journey-img" alt="Personal Questions Screenshot">
+                </div>
+            </div>
+
+            <div class="journey-divider"></div>
+
+            <!-- STEP 3 -->
+            <div class="row align-items-center gx-5 mt-5">
+                <div class="col-md-6 text-start">
+                    <div class="journey-step mb-3">
+                        <div class="step-number">3</div>
+                    </div>
+                    <h4>Personalized Dashboard</h4>
+                    <p class="journey-emphasis">
+                        Tailored To Your Situation!
+                    </p>
+                    <p>
+                        Your path is unique! We will create a personalized pathway for you and provide helpful resources along the way. It’s never too early nor late to start planning, especially when it comes to your finances and health!
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img src="img/Dashboard-img.webp" class="img-fluid rounded journey-img" alt="Dashboard Example Screenshot">
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- DIVIDER -->
-        <div class="journey-divider"></div>
+    <!-- FOOTER -->
+    <footer class="footer text-center text-white py-4">
+        <h5 class="mb-1">HSA<span class="brand-accent">Next</span></h5>
+        <small>Your Financial Health Journey Starts Here</small>
+    </footer>
 
-        <!-- STEP 3 -->
-        <div class="row align-items-center gx-5 mt-5">
-            <div class="col-md-6 text-start">
-                <div class="journey-step mb-3">
-                    <div class="step-number">3</div>
-                </div>
-                <h4>Personalized Dashboard</h4>
-                <h5>Tailored to your situation!</h5>
-                <p>Your path is unique! We will create a personalized pathway for you and provide helpful resources along the way.
-                    It’s never too early nor late to start planning, especially when it comes to your finances and health!</p>
-            </div>
-            <div class="col-md-6">
-                <img src="img/Dashboard-img.webp" class="img-fluid rounded journey-img" alt="Dashboard Example Screenshot">
-            </div>
-        </div>
-
-    </div>
-</section>
-        
-        <!-- FOOTER -->
-        <footer class="footer text-center text-white py-4">
-            <h5 class="mb-1">HSANext</h5>
-            <small>Your Financial Health Journey Starts Here</small>
-        </footer>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/script.js"></script>
-        
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
 </html>

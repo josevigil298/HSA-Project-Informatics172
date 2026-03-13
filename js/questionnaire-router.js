@@ -35,23 +35,6 @@ function getSavedAnswer(questionNumber) {
   return answers[QUESTION_KEYS[questionNumber]] || null;
 }
 
-/*
-====================================================
-ROUTING LOGIC
-
-Independent + Insured Under Guardian + HDHP -> HSA-Resources.html
-Independent + Insured Under Employer + HDHP -> HSA-Resources.html
-Independent + Insured Under Guardian + Other -> Next-Step.html
-Independent + Insured Under Employer + Other -> Next-Step.html
-Independent + Insured Under University + Other -> Next-Step.html
-Independent + Not Insured -> Dashboard.html
-Dependent + Insured Under Guardian -> Dashboard.html
-Dependent + Insured Under University -> Dashboard.html
-Dependent + Insured Under Employer -> Dashboard.html
-Dependent + Uninsured -> Dashboard.html
-
-====================================================
-*/
 
 function shouldSkipQuestion4(answers) {
   return (
@@ -87,7 +70,7 @@ function getFinalRoute(answers) {
     taxStatus === "dependent" &&
     insuranceStatus === "uninsured"
   ) {
-    return "../Dashboards/Dashboard-2.html";
+    return "../Dashboards/Dashboard-4.html";
   }
 
   // ------------------------------------------------
@@ -111,7 +94,7 @@ function getFinalRoute(answers) {
     insuranceStatus === "insured" &&
     insuranceSource === "university"
   ) {
-    return "../Dashboards/Dashboard-2.html";
+    return "../Dashboards/Dashboard-4.html";
   }
 
   // ------------------------------------------------
@@ -123,7 +106,7 @@ function getFinalRoute(answers) {
     insuranceStatus === "insured" &&
     insuranceSource === "employer"
   ) {
-    return "../Dashboards/Dashboard-2.html";
+    return "../Dashboards/Dashboard-3.html";
   }
 
   // ------------------------------------------------
@@ -175,7 +158,7 @@ function getFinalRoute(answers) {
     insuranceSource === "employer" &&
     planType === "other"
   ) {
-    return "../Result-Question/Next-Step.html";
+    return "../Result-Question/Next-Step-2.html";
   }
 
   // ------------------------------------------------
@@ -188,7 +171,7 @@ function getFinalRoute(answers) {
     insuranceSource === "university" &&
     planType === "other"
   ) {
-    return "../Result-Question/Next-Step.html";
+    return "../Result-Question/Next-Step-3.html";
   }
 
   console.error("No matching route for this answer combination:", answers);
