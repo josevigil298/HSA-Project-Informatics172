@@ -1,4 +1,5 @@
 const STORAGE_KEY = "hsaQuestionnaireAnswers";
+const FINAL_ROUTE_KEY = "hsaFinalRoute";
 
 const QUESTION_KEYS = {
   1: "taxStatus",
@@ -35,6 +36,9 @@ function getSavedAnswer(questionNumber) {
   return answers[QUESTION_KEYS[questionNumber]] || null;
 }
 
+function saveFinalRoute(route) {
+  localStorage.setItem(FINAL_ROUTE_KEY, route);
+}
 
 function shouldSkipQuestion4(answers) {
   return (
@@ -179,6 +183,11 @@ function getFinalRoute(answers) {
   return null;
 }
 
+function goToLoadingScreen(finalRoute) {
+  saveFinalRoute(finalRoute);
+  window.location.href = "../personal-questions/Loading.html";
+}
+
 function goToNextQuestion(questionNumber) {
   const answers = getAnswers();
 
@@ -188,11 +197,11 @@ function goToNextQuestion(questionNumber) {
     return;
   }
 
-  // Q2 -> if uninsured, go straight to final route; if insured, go to Q3
+  // Q2 -> if uninsured, go straight to final route through loading screen; if insured, go to Q3
   if (questionNumber === 2) {
     if (answers.insuranceStatus === "uninsured") {
       const route = getFinalRoute(answers);
-      if (route) window.location.href = route;
+      if (route) goToLoadingScreen(route);
       return;
     }
 
@@ -206,7 +215,7 @@ function goToNextQuestion(questionNumber) {
   if (questionNumber === 3) {
     if (shouldSkipQuestion4(answers)) {
       const route = getFinalRoute(answers);
-      if (route) window.location.href = route;
+      if (route) goToLoadingScreen(route);
       return;
     }
 
@@ -214,10 +223,11 @@ function goToNextQuestion(questionNumber) {
     return;
   }
 
-  // Q4 -> final route
+  // Q4 -> final route through loading screen
   if (questionNumber === 4) {
     const route = getFinalRoute(answers);
-    if (route) window.location.href = route;
+    if (route) goToLoadingScreen(route);
+    return;
   }
 }
 
@@ -231,7 +241,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let selectedValue = getSavedAnswer(questionNumber);
 
   function updateUI() {
-    optionCards.forEach(card => {
+    optionCards.forEach((card) => {
       card.classList.toggle("selected", card.dataset.value === selectedValue);
     });
 
@@ -240,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateUI();
 
-  optionCards.forEach(card => {
+  optionCards.forEach((card) => {
     card.addEventListener("click", () => {
       selectedValue = card.dataset.value;
       saveAnswer(questionNumber, selectedValue);

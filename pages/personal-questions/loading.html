@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Jose Vigil">
+  <meta name="description" content="HSANext Loading Screen">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="../../css/loading.css" rel="stylesheet">
+
+  <title>HSANext - Creating your Dashboard</title>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="topbar navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="topbar-inner container">
+        <a class="navbar-brand fw-bold brand" href="../../index.html">
+            HSA<span class="brand-accent">Next</span>
+        </a>
+    </div>
+   </nav>
+
+  <main class="loading-page">
+    <div class="loading-box">
+      <div class="loading-spinner"></div>
+
+      <h1 class="loading-title">Preparing your personalized pathway...</h1>
+
+      <p class="loading-text">
+        We’re reviewing your responses and building the next best steps for your HSA journey.
+      </p>
+    </div>
+  </main>
+
+  <script>
+    const finalRoute = localStorage.getItem("hsaFinalRoute");
+
+    setTimeout(() => {
+      if (finalRoute) {
+        window.location.href = finalRoute;
+      } else {
+        window.location.href = "../../index.html";
+      }
+    }, 2200);
+  </script>
+</body>
+</html>
