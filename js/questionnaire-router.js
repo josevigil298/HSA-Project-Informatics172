@@ -31,11 +31,6 @@ function saveAnswer(questionNumber, value) {
   saveAnswers(answers);
 }
 
-function getSavedAnswer(questionNumber) {
-  const answers = getAnswers();
-  return answers[QUESTION_KEYS[questionNumber]] || null;
-}
-
 function saveFinalRoute(route) {
   localStorage.setItem(FINAL_ROUTE_KEY, route);
 }
@@ -57,9 +52,6 @@ function getFinalRoute(answers) {
 
   console.log("Routing with answers:", answers);
 
-  // ------------------------------------------------
-  // Independent + Not Insured -> Dashboard
-  // ------------------------------------------------
   if (
     taxStatus === "independent" &&
     insuranceStatus === "uninsured"
@@ -67,9 +59,6 @@ function getFinalRoute(answers) {
     return "../Dashboards/Dashboard.html";
   }
 
-  // ------------------------------------------------
-  // Dependent + Uninsured -> Dashboard
-  // ------------------------------------------------
   if (
     taxStatus === "dependent" &&
     insuranceStatus === "uninsured"
@@ -77,10 +66,6 @@ function getFinalRoute(answers) {
     return "../Dashboards/Dashboard-4.html";
   }
 
-  // ------------------------------------------------
-  // Dependent + Insured Under Guardian -> Dashboard
-  // plan type does not matter
-  // ------------------------------------------------
   if (
     taxStatus === "dependent" &&
     insuranceStatus === "insured" &&
@@ -89,22 +74,14 @@ function getFinalRoute(answers) {
     return "../Dashboards/Dashboard-2.html";
   }
 
-  // ------------------------------------------------
-  // Dependent + Insured Under University -> Dashboard
-  // plan type does not matter
-  // ------------------------------------------------
   if (
     taxStatus === "dependent" &&
     insuranceStatus === "insured" &&
     insuranceSource === "university"
   ) {
-    return "../Dashboards/Dashboard-4.html";
+    return "../Dashboards/Dashboard-5.html";
   }
 
-  // ------------------------------------------------
-  // Dependent + Insured Under Employer -> Dashboard
-  // plan type does not matter
-  // ------------------------------------------------
   if (
     taxStatus === "dependent" &&
     insuranceStatus === "insured" &&
@@ -113,10 +90,6 @@ function getFinalRoute(answers) {
     return "../Dashboards/Dashboard-3.html";
   }
 
-  // ------------------------------------------------
-  // Independent + Insured Under Guardian + HDHP
-  // -> HSA Resources
-  // ------------------------------------------------
   if (
     taxStatus === "independent" &&
     insuranceStatus === "insured" &&
@@ -126,10 +99,6 @@ function getFinalRoute(answers) {
     return "../Result-Question/HSA-Resources.html";
   }
 
-  // ------------------------------------------------
-  // Independent + Insured Under Employer + HDHP
-  // -> HSA Resources
-  // ------------------------------------------------
   if (
     taxStatus === "independent" &&
     insuranceStatus === "insured" &&
@@ -139,10 +108,6 @@ function getFinalRoute(answers) {
     return "../Result-Question/HSA-Resources.html";
   }
 
-  // ------------------------------------------------
-  // Independent + Insured Under Guardian + Other
-  // -> Next Step
-  // ------------------------------------------------
   if (
     taxStatus === "independent" &&
     insuranceStatus === "insured" &&
@@ -152,10 +117,6 @@ function getFinalRoute(answers) {
     return "../Result-Question/Next-Step.html";
   }
 
-  // ------------------------------------------------
-  // Independent + Insured Under Employer + Other
-  // -> Next Step
-  // ------------------------------------------------
   if (
     taxStatus === "independent" &&
     insuranceStatus === "insured" &&
@@ -165,10 +126,6 @@ function getFinalRoute(answers) {
     return "../Result-Question/Next-Step-2.html";
   }
 
-  // ------------------------------------------------
-  // Independent + Insured Under University + Other
-  // -> Next Step
-  // ------------------------------------------------
   if (
     taxStatus === "independent" &&
     insuranceStatus === "insured" &&
@@ -191,13 +148,11 @@ function goToLoadingScreen(finalRoute) {
 function goToNextQuestion(questionNumber) {
   const answers = getAnswers();
 
-  // Q1 -> Q2
   if (questionNumber === 1) {
     window.location.href = "../personal-questions/Personal-Questionnaire-Q2.html";
     return;
   }
 
-  // Q2 -> if uninsured, go straight to final route through loading screen; if insured, go to Q3
   if (questionNumber === 2) {
     if (answers.insuranceStatus === "uninsured") {
       const route = getFinalRoute(answers);
@@ -211,7 +166,6 @@ function goToNextQuestion(questionNumber) {
     }
   }
 
-  // Q3 -> skip Q4 when plan type does not matter
   if (questionNumber === 3) {
     if (shouldSkipQuestion4(answers)) {
       const route = getFinalRoute(answers);
@@ -223,7 +177,6 @@ function goToNextQuestion(questionNumber) {
     return;
   }
 
-  // Q4 -> final route through loading screen
   if (questionNumber === 4) {
     const route = getFinalRoute(answers);
     if (route) goToLoadingScreen(route);
@@ -233,12 +186,20 @@ function goToNextQuestion(questionNumber) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const questionNumber = getCurrentQuestionNumber();
+
+  // 🔥 CLEAR STORAGE when starting questionnaire
+  if (questionNumber === 1) {
+    localStorage.removeItem(STORAGE_KEY);
+    localStorage.removeItem(FINAL_ROUTE_KEY);
+  }
+
   const optionCards = document.querySelectorAll(".option-card");
   const continueBtn = document.getElementById("continueBtn");
 
   if (!optionCards.length || !continueBtn) return;
 
-  let selectedValue = getSavedAnswer(questionNumber);
+  // ❌ NO PREFILL
+  let selectedValue = null;
 
   function updateUI() {
     optionCards.forEach((card) => {

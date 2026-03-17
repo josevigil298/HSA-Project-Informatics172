@@ -557,3 +557,63 @@ a{
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
   max-width: 360px;
 }
+
+/* Download as PDF */
+@media print {
+  @page {
+    size: letter;
+    margin: 0.5in;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .sidebar,
+  .sidebar * {
+    visibility: visible;
+  }
+
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    border: none;
+    background: white !important;
+  }
+
+  .sidebar-download {
+    display: none !important;
+  }
+
+  .topbar,
+  .main {
+    display: none !important;
+  }
+
+  .sidebar-head {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .phase-title,
+  .path-num,
+  .pill-btn {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .info-popup[hidden] {
+    display: none !important;
+  }
+
+  .info-btn {
+    display: none !important;
+  }
+}

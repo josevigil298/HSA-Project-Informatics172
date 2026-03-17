@@ -358,3 +358,55 @@ a {
     gap: 10px;
   }
 }
+
+
+/* Download as PDF */
+@media print {
+  @page {
+    size: letter;
+    margin: 0.5in;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .page-inner,
+  .page-inner * {
+    visibility: visible;
+  }
+
+  .page-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    background: white !important;
+    padding: 0;
+  }
+
+  .topbar,
+  .back-btn,
+  .footer-cta,
+  .download-btn {
+    display: none !important;
+  }
+
+  .plan-card,
+  .phase-header,
+  .plan-note,
+  .hero,
+  .section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .pill-btn {
+    box-shadow: none !important;
+  }
+}

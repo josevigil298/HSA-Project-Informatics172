@@ -8,3 +8,7 @@ document.querySelectorAll(".plan-toggle").forEach((cb) => {
       card.classList.toggle("is-done", cb.checked);
     });
   });
+
+  function downloadPDF() {
+    window.print();
+  }

@@ -181,3 +181,8 @@ window.addEventListener("load", () => {
 });
 
 window.addEventListener("resize", updateDots);
+
+// Download as PDF//
+function downloadSidebarPDF() {
+  window.print();
+}
